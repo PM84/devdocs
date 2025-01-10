@@ -15,47 +15,52 @@
  * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-/* eslint-disable global-require */
-require('dotenv').config();
+import { config as dotEnvConfig } from 'dotenv';
+import Versions from './versions.json';
+import MoodleBannerRemark from './src/remark/moodleBanner.js';
+import TrackerLinksRemark from './src/remark/trackerLinks.js';
+import UnversionedDocsLinksRemark from './src/remark/unversionedDocsLinks.js';
+import * as nextVersion from './nextVersion.js';
 
-const Versions = require('./versions.json');
+// eslint-disable global-require
+
+dotEnvConfig();
 
 const versionConfig = Object.fromEntries(Versions.map((version) => [version, {
     label: version,
     banner: 'none',
 }]));
 versionConfig.current = {
-    label: 'master',
+    label: `main (${nextVersion.nextVersion})`,
     banner: 'none',
+    path: nextVersion.nextVersion,
 };
 
 // Share the remarkPlugins between all presets.
 const remarkPlugins = [
-    require('./src/remark/moodleBanner'),
-    require('./src/remark/trackerLinks'),
+    MoodleBannerRemark,
+    TrackerLinksRemark,
+    UnversionedDocsLinksRemark,
 ];
 
 const isDeployPreview = !!process.env.NETLIFY && process.env.CONTEXT === 'deploy-preview';
 
 const getBaseUrl = () => {
-    if (process.env.NETLIFY) {
-        // Netlify hosts on '/', always.
-        return '/';
-    }
-
     if (typeof process.env.BASEURL !== 'undefined') {
         // Respect the env.
         return process.env.BASEURL;
     }
 
-    // Default is currently '/devdocs'.
-    return '/devdocs/';
+    return '/';
 };
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
     title: 'Moodle Developer Resources',
     tagline: 'Nurturing Moodle Developers',
+    future: {
+        experimental_faster: true,
+    },
 
     // url: 'https://develop.moodle.org',
     url: process.env?.URL || 'https://moodledev.io',
@@ -149,6 +154,15 @@ const config = {
             },
         ],
 
+        // This is the GA-4 tag for all Moodle properties.
+        [
+            '@docusaurus/plugin-google-gtag',
+            {
+                id: 'central-analytics',
+                trackingID: 'G-QWYJYEY9P5',
+            },
+        ],
+
         [
             '@docusaurus/plugin-pwa',
             {
@@ -211,4 +225,4 @@ const config = {
     ],
 };
 
-module.exports = config;
+export default config;

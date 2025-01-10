@@ -117,7 +117,7 @@ Few things to highlight:
 
 ## Individual settings
 
-Let us look at a simple example: [mod/lesson/settings.php](https://github.com/moodle/moodle/blob/master/mod/lesson/settings.php). This is included by admin/settings/plugins.php, which has already created $settings, which is an admin_settingpage that we can add to. The file contains lots of lines that look a bit like:
+Let us look at a simple example: [mod/lesson/settings.php](https://github.com/moodle/moodle/blob/main/mod/lesson/settings.php). This is included by admin/settings/plugins.php, which has already created $settings, which is an admin_settingpage that we can add to. The file contains lots of lines that look a bit like:
 
 ```php
 $settings->add(new admin_setting_configtext('mod_lesson/mediawidth', get_string('mediawidth', 'lesson'),
@@ -220,5 +220,5 @@ An OK rule of thumb is: You can use an external page, which might use formslib, 
 - [adding settings for activity modules](https://docs.moodle.org/dev/Modules)
 - [adding admin reports to the tree](https://docs.moodle.org/dev/Admin_reports#How_your_report_gets_included_in_the_admin_tree)
 - configuration of repository plugins
-- [configuration for filter](../../plugintypes/filter/index.md#adding-a-settings-screen)
+- [configuration for filter](../../plugintypes/filter/index.md)
 - [Other developer documentation](https://docs.moodle.org/dev/Developer_documentation)

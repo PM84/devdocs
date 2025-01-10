@@ -8,8 +8,6 @@ tags:
 
 <Since version="3.2" />
 
-import { CodeBlock, CodeExample, InvalidExample, ValidExample, Since, DeprecatedSince } from '@site/src/components';
-
 The use of modal modules provides a simplified developer experience for creating modal dialogues within Moodle.
 
 The module attempts to ensure that all accessibility requirements are met, including applying the correct aria roles, focus control, aria hiding background elements, and locking keyboard navigation.
@@ -233,14 +231,14 @@ There are two parts to this:
 
 Since Moodle 4.3, creating the Modal class is as simple as extending the `core/modal` class, and providing a `TYPE` property, and `TEMPLATE` property.
 
-For older versions of Moodle, refer to the [Moodle 4.2 documentation](/versioned_docs/version-4.2/guides/javascript/modal/index.md#creating-a-custom-modal-type).
+For older versions of Moodle, refer to the [Moodle 4.2 documentation](https://6728347a15ea81be71bdf1d0--moodledevdocs.netlify.app/docs/4.2/guides/javascript/modal/#creating-a-custom-modal-type).
 
 :::
 
 ```javascript title="mod/example/amd/src/my_modal.js"
 import Modal from 'core/modal';
 
-export default MyModal extends Modal {
+export default class MyModal extends Modal {
     static TYPE = "mod_example/my_modal";
     static TEMPLATE = "mod_example/my_modal";
 }
@@ -296,7 +294,7 @@ When creating your own modal type, you may wish to override the standard configu
 ```javascript title="Overriding standard options"
 import Modal from 'core/modal';
 
-export default MyModal extends Modal {
+export default class MyModal extends Modal {
     static TYPE = "mod_example/my_modal";
     static TEMPLATE = "mod_example/my_modal";
 

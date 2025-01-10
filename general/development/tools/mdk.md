@@ -8,7 +8,7 @@ Every developer creates simple tools to avoid repeating cumbersome and/or boring
 
 ## Key concept
 
-The most important concept of MDK is that it works with Moodle instances. An instance of Moodle is a directory in which you have checked out a particular version together with a database using a specific database engine. This means that if you want to work on Moodle 2.3 and 2.4, using both MySQL and PostgreSQL, you will have four separate instance directories. This choice was made because it is the safest, clearest, and most straightforward solution.
+The most important concept of MDK is that it works with Moodle instances. An instance of Moodle is a directory in which you have checked out a particular version together with a database using a specific database engine. This means that if you want to work on Moodle 4.3 and 4.2, using both MySQL and PostgreSQL, you will have four separate instance directories. This choice was made because it is the safest, clearest, and most straightforward solution.
 
 ## Typical workflows using MDK
 
@@ -32,10 +32,10 @@ These options include:
 
 - `--install`: launch the installation script after creating the instance
 - `--engine`: database engine to install the instance on (must be used with `--install`), default: `mysqli`
-- `--version`: version of Moodle create an instance of (default: '`master'`)
+- `--version`: version of Moodle create an instance of (default: `main`)
 - `--run`: scripts to run after installation (default: `none`)
 
-More information about scripts is available here: https://github.com/FMCorz/mdk/tree/master/mdk/scripts
+Check out MDK's [`scripts` folder](https://github.com/FMCorz/mdk/tree/master/mdk/scripts) for more information.
 
 <details>
   <summary>This is equivalent to doing</summary>
@@ -221,8 +221,8 @@ Please follow the instructions from the [README file](https://github.com/FMCorz/
 When you install MDK, you will be asked for the following information (with default responses indicated in square brackets):
 
 - What user are you initialising MDK for? [default - your current username]
-- What is the `DocumentRoot` of your virtual host? [`~/www`] <- **See note below**
-- Where do you want to store your Moodle instances? [`~/moodles`] <- This can be in your home directory (the default) because a symlink will be created using `DocumentRoot`
+- What is the `DocumentRoot` of your virtual host? [`~/www`] \<- **See note below**
+- Where do you want to store your Moodle instances? [`~/moodles`] \<- This can be in your home directory (the default) because a symlink will be created using `DocumentRoot`
 - What is your Github username? (Leave blank if not using Github)
 - What is your MySQL user? [`root`]
 - What is your MySQL password? [`root`]
@@ -244,20 +244,20 @@ mdk config set path ""
 Every Moodle release, a new version of MDK is also being released in order to prepare for the development of the next Moodle version. To upgrade MDK:
 
 1. Update all of the Moodle instances: `mdk update --all`
-1. Check out the master branch for all of your master instances, e.g. in your stable_master branch: `git checkout master`
+1. Check out the `main` branch for all of your `main` instances, e.g. in your stable_main branch: `git checkout main`
 1. Upgrade MDK
    1. Via pip: `sudo pip install moodle-sdk --upgrade`
    1. Via Homebrew: `brew upgrade moodle-sdk`
 1. Run MDK doctor to fix its `masterBranch` configuration. `mdk doctor --fix --masterbranch`
-1. Run MDK doctor to check the master instances. `mdk doctor --all`
-   1. If you don't see an error saying something like "stable_master is on branch master instead of MOODLE_XX_STABLE", then you're all good. Otherwise, do a hard reset your master instances:
+1. Run MDK doctor to check the `main` instances. `mdk doctor --all`
+   1. If you don't see an error saying something like "stable_main is on branch main instead of MOODLE_XX_STABLE", then you're all good. Otherwise, do a hard reset your main instances:
 
 ```
 mdk update -c
-cd ~/moodles/[integration/stable]_master
-git checkout master
+cd ~/moodles/[integration/stable]_main
+git checkout main
 git fetch `mdk config show upstreamRemote`
-git reset --hard `mdk config show upstreamRemote`/master
+git reset --hard `mdk config show upstreamRemote`/main
 ```
 
 ## The MDK Suite

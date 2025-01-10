@@ -8,8 +8,6 @@ tags:
 
 <Since version="3.2" />
 
-import { CodeBlock, CodeExample, InvalidExample, ValidExample, Since } from '@site/src/components';
-
 The use of modal modules provides a simplified developer experience for creating modal dialogues within Moodle.
 
 The module attempts to ensure that all accessibility requirements are met, including applying the correct aria roles, focus control, aria hiding background elements, and locking keyboard navigation.
@@ -147,9 +145,9 @@ We highly recommend declaring the _template_ as a static property on the class t
 
 ```javascript title="mod/example/amd/src/my_modal.js"
 import Modal from 'core/modal';
-import ModalFactory from 'core/modal_factory';
+import ModalRegistry from 'core/modal_registry';
 
-export default MyModal extends Modal {
+export default class MyModal extends Modal {
     static TYPE = "mod_example/my_modal";
     static TEMPLATE = "mod_example/my_modal";
 }

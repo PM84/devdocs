@@ -10,11 +10,11 @@ The structure of this page is the following:
 
 - The first part, up to the point where you get the `npm start` command to work, includes the basics of what you need to work on the app.
 - The second part indicates how to build the app to run it on a native device (or emulator).
-- You can find [troubleshooting advices in a separate page](./setup/troubleshooting). If you encounter a problem that is not already listed, please consider adding it.
+- You can find [troubleshooting advices in a separate page](./troubleshooting.md). If you encounter a problem that is not already listed, please consider adding it.
 
 Most of your development can happen on a browser, you only need to use an emulator if you have to work on native functionality.
 
-If you are just [adding mobile support to plugins](./plugins-development-guide), you probably don't need to build the app yourself and you can skip reading this page.
+If you are just [adding mobile support to plugins](../plugins-development-guide/index.md), you probably don't need to build the app yourself and you can skip reading this page.
 
 ## Requirements
 
@@ -22,7 +22,7 @@ If you are just [adding mobile support to plugins](./plugins-development-guide),
 
 Most of the time we recommend that you use a browser for development; the app will work in any Chromium-based browser. We recommend using the Chromium browser (an open source alternative to Google Chrome). You can get it from the [official download page](https://www.chromium.org/getting-involved/download-chromium).
 
-To learn more about using a browser for development, and why it needs to be Chromium-based, read the [Using the Moodle App in a browser](./setup/app-in-browser) page.
+To learn more about using a browser for development, and why it needs to be Chromium-based, read the [Using the Moodle App in a browser](./app-in-browser.md) page.
 
 ### Install git
 
@@ -40,7 +40,7 @@ If you intend to run the application in a native device, you will need to instal
 
 ### Windows only: Native build dependencies
 
-`node-gyp` requires native build tools for your platform. If you're developing on Mac or Linux, you'll probably have these already ([refer to the docs if you don't](https://github.com/nodejs/node-gyp/blob/master/README.md)). On Windows, run the following command as administrator (in cmd or Powershell):
+`node-gyp` requires native build tools for your platform. If you're developing on Mac or Linux, you'll probably have these already ([refer to the docs if you don't](https://github.com/nodejs/node-gyp/blob/main/README.md)). On Windows, run the following command as administrator (in cmd or Powershell):
 
 ```bash
 npm install --global --production windows-build-tools
@@ -59,22 +59,6 @@ pod setup
 
 Please note that for compiling the app in Mac you need to open the `Moodle.xcworkspace` file, more information here: [MOBILE-1970](https://tracker.moodle.org/browse/MOBILE-1970).
 
-### Linux only: `libsecret`
-
-If you are using [the gulp push script](./scripts/gulp-push), you need to have `libsecret` installed before running `npm install`. Depending on your distribution, you will need to run one of the following commands:
-
-```bash title="Debian/Ubuntu"
-sudo apt-get install libsecret-1-dev
-```
-
-```bash title="Red Hat"
-sudo yum install libsecret-devel
-```
-
-```bash title="Arch Linux"
-sudo pacman -S libsecret
-```
-
 ## Running the app in a browser
 
 You can obtain a copy of the source code by cloning the public repository:
@@ -91,7 +75,7 @@ npm install
 npm start
 ```
 
-This will launch the application in a browser and you should be ready to start coding (you may also want to [configure the default browser](./setup/app-in-browser#configuring-the-default-browser) for future runs). This compiles the entire application and can take a while, so don't worry if it doesn't open the browser instantly. Keep in mind that this command may open the browser before the dev server is ready, and you could get a network error. If that happens, just wait until the dev server is ready and launch the application again. It should be ready when you see a "Compiled successfully" message in the console.
+This will launch the application in a browser and you should be ready to start coding (you may also want to [configure the default browser](./app-in-browser.md#configuring-the-default-browser) for future runs). This compiles the entire application and can take a while, so don't worry if it doesn't open the browser instantly. Keep in mind that this command may open the browser before the dev server is ready, and you could get a network error. If that happens, just wait until the dev server is ready and launch the application again. It should be ready when you see a "Compiled successfully" message in the console.
 
 Congratulations, you have just completed the basics to become a Moodle App developer!
 
@@ -110,7 +94,7 @@ npm run prod:android # Uses AOT compilation, read below
 npm run prod:ios     # Uses AOT compilation, read below
 ```
 
-If you get any errors while building, please see the [Troubleshooting](#troubleshooting) section below.
+If you get any errors while building, please see the [Troubleshooting](./troubleshooting.md) section.
 
 You can also inspect the HTML and look at the console logs by using [Chrome's Remote Debugging for Android](https://developer.chrome.com/docs/devtools/remote-debugging/) and [Safari's Develop menu for iOS](https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/15.1/mac/12.0). This will only work with emulators or devices connected to your computer running with the development environment.
 
@@ -130,39 +114,9 @@ Running `npm start`, `npm run dev:android` or `npm run dev:ios` compiles using J
 
 The `npm run prod:android` and `npm run prod:ios` commands use AOT compilation because they generate production bundles.
 
-### Using Android emulators
-
-Most of the time, you should be using an emulator running recent versions of Android, and it should work fine. But sometimes, you may want to use an older version to test a specific behaviour.
-
-If you want to run the application in an Android 5 emulator, you'll need to upgrade the system webview because emulators come with version 37 preinstalled. Your first idea may be to upgrade the webview using the Google Play store, but it will not work because the webview served by Google Play is `com.google.android.webview` whilst the system webview used in emulators is `com.android.webview`. You can do the following instead.
-
-Once you have [created your Android 5 virtual device](https://developer.android.com/studio/run/managing-avds), you'll need to do download [the apk for Webview 61](https://android.googlesource.com/platform/external/chromium-webview/+/refs/heads/oreo-m3-release/prebuilt/x86_64/) and run the following commands:
-
-```bash
-# Open the folder where the "emulator" script is installed
-cd $(dirname `which emulator`)
-
-# Boot the emulator in write mode (you can get a list of device names running "emulator -list-avds")
-emulator @DeviceName -writable-system
-
-# In a different shell, make /system writable
-adb remount
-
-# Uninstall the webview app manually and reboot the device
-adb shell
-rm -rf /data/data/com.android.webview
-rm -rf /system/app/webview
-reboot
-
-# Install the new version
-adb install webview.apk
-```
-
-After doing this, remember to run the emulator in write mode for subsequent sessions, but you don't need to call the `remount` command every time.
-
 ## See also
 
 - [Moodle App Coding Style](../../../development/policies/codingstyle-moodleapp.md)
-- [Debugging network requests in the Moodle App](./network-debug)
+- [Debugging network requests in the Moodle App](../network-debug.md)
 - [Moodle Docker](https://github.com/moodlehq/moodle-docker)
 - [Ionic CLI docs](http://ionicframework.com/docs/cli/)

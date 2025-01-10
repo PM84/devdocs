@@ -10,8 +10,6 @@ tags:
 
 <!-- markdownlint-disable no-inline-html -->
 
-import { CodeExample, ValidExample, InvalidExample } from '@site/src/components';
-
 This document outlines the exceptions to the [Coding style](./codingstyle/index.md) and [JavaScript Coding Style](https://docs.moodle.org/dev/JavaScript_Coding_Style) which apply to the Moodle App and also includes rules for other technologies that are used in the app, like Typescript and Angular.
 
 Unless otherwise specified, developers should follow the indications included on those documents.
@@ -437,7 +435,7 @@ export class MyService {
 
 ### Avoid calling methods in templates
 
-Method calls should be avoided in template rendering, this includes structural directives such as `ngIf` or `ngFor`.
+Method calls should be avoided in template rendering, including structural directives like `ngIf` or `ngFor`. The same applies to the new control flow syntax with `@if` or `@for`.
 
 Angular templates can be rendered very often, and calling methods on every render could cause some unintended performance issues. For that reason, it is usually safer to rely on values rather than methods.
 
@@ -446,9 +444,9 @@ In some situations, a simple method that only returns a value would be acceptabl
 <ValidExample title="Good">
 
 ```html
-<div *ngIf="isAdmin">
-    <!-- Show admin content -->
-</div>
+@if (isAdmin) {
+    <div> <!-- Show admin content --> </div>
+}
 ```
 
 </ValidExample>
@@ -456,9 +454,9 @@ In some situations, a simple method that only returns a value would be acceptabl
 <CodeExample type="warning" title="Allowed, but discouraged">
 
 ```html
-<div *ngIf="site.isAdmin()">
-    <!-- Show admin content -->
-</div>
+@if (site.isAdmin()) {
+    <div> <!-- Show admin content --> </div>
+}
 ```
 
 </CodeExample>
@@ -504,15 +502,17 @@ There is a maximum line length of 140 characters for templates. Whenever that le
 <ValidExample title="Good">
 
 ```html
-<ion-item
-    *ngFor="let course of courses" [title]="course.title"
-    [class.selected]="isSelected(course)" class="ion-text-wrap"
-    button detail="true"
-    (click)="selectCourse(course)">
-    <ion-label>
-        {{ course.title }}
-    </ion-label>
-</ion-item>
+@for (course of courses; track course.id) {
+    <ion-item
+        [title]="course.title"
+        [class.selected]="isSelected(course)" class="ion-text-wrap"
+        button detail="true"
+        (click)="selectCourse(course)">
+        <ion-label>
+            {{ course.title }}
+        </ion-label>
+    </ion-item>
+}
 ```
 
 </ValidExample>
@@ -520,18 +520,19 @@ There is a maximum line length of 140 characters for templates. Whenever that le
 <InvalidExample title="Bad">
 
 ```html
-<ion-item
-    *ngFor="let course of courses"
-    [title]="course.title"
-    [class.selected]="isSelected(course)"
-    class="ion-text-wrap"
-    button
-    detail="true"
-    (click)="selectCourse(course)">
-    <ion-label>
-        {{ course.title }}
-    </ion-label>
-</ion-item>
+@for (course of courses; track course.id) {
+    <ion-item
+        [title]="course.title"
+        [class.selected]="isSelected(course)"
+        class="ion-text-wrap"
+        button
+        detail="true"
+        (click)="selectCourse(course)">
+        <ion-label>
+            {{ course.title }}
+        </ion-label>
+    </ion-item>
+}
 ```
 
 </InvalidExample>

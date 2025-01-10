@@ -7,8 +7,6 @@ tags:
   - Developer processes
 ---
 
-import { CodeBlock, TabItem, Tabs, ValidExample, InvalidExample } from '@site/src/components';
-
 ## Overview
 
 ### Scope
@@ -45,7 +43,7 @@ For details about using the Moodle API to get things done, see the [coding guide
 
 Several tools are available to help you in write code that conforms to this guide:
 
-- The Moodle [Code checker](https://moodle.org/plugins/view.php?plugin=local_codechecker) (integrates with [eclipse/phpstorm](https://github.com/moodlehq/moodle-local_codechecker/blob/master/README.md#ide-integration))
+- The Moodle [Code checker](https://moodle.org/plugins/view.php?plugin=local_codechecker) (integrates with [eclipse/phpstorm](https://github.com/moodlehq/moodle-local_codechecker/blob/main/README.md#ide-integration))
 - The Moodle [PHPdoc checker](https://moodle.org/plugins/local_moodlecheck)
 
 It is worth using both tools to check the code you are writing as they both perform slightly different checks.
@@ -555,7 +553,7 @@ $allowfilelocking = false;
 
 ```php
 $Quiz = null; // Variables should be all lower case.
-$camelCase = null; // Variables should not be in camelCase, PascalCake.
+$camelCase = null; // Variables should not be in camelCase, PascalCase.
 $aReallyLongVariableNameWithoutAGoodReason = null; // Variable names should be sensible and short.
 $error_string = null; // Variable names should not contain underscores.
 $preventfilelocking = true; // Variable names should not be negative.
@@ -719,7 +717,7 @@ use mod_porridge\local\equipment\spoon as silverspoon; // Named import with no g
 
 <InvalidExample>
 
-```php title="Inocrrect: An example of the namespace keyword used incorrectly"
+```php title="Incorrect: An example of the namespace keyword used incorrectly"
 $obj = new namespace\Another();
 ```
 
@@ -1938,7 +1936,21 @@ All functions and methods should have a complete docblock like this:
 
 You must include a description even if it appears to be obvious from the `@param` and/or `@return` lines.
 
-An exception is made for overridden methods which make no change to the meaning of the parent method and maintain the same arguments/return values. In this case you should omit the comment completely. Use of the `@inheritdoc` or `@see` tags is explicitly forbidden as a replacement for any complete docblock.
+An exception is made for overridden methods which make no change to the meaning of the parent method and maintain the same arguments/return values. In this case you should omit the comment completely, and apply the `#[\Override]` attribute. This can safely be applied in older versions of PHP before the attribute was supported. Use of the `@inheritdoc` or `@see` tags is explicitly forbidden as a replacement for any complete docblock.
+
+<ValidExample>
+
+```php
+class example implements templatable {
+
+    #[\Override]
+    public function export_for_template(renderer_base $output) {
+        return ['foo' => 'bar'];
+    }
+}
+```
+
+</ValidExample>
 
 ### Defines
 
@@ -2026,7 +2038,7 @@ This is especially important if you know an issue still exists in that code that
 
 If you have a big task that is nearly done, apart a few TODOs, and you really want to mark the big task as finished, then you should file new tracker tasks for each TODO and change the TODOs comments to point at the new issue numbers.
 
-There is a nice "to-do checker" reporting tool, restricted to admins and available via web @ [`lib/tests/other/todochecker.php`](https://github.com/moodle/moodle/blob/master/lib/tests/other/todochecker.php).
+There is a nice "to-do checker" reporting tool, restricted to admins and available via web @ [`lib/tests/other/todochecker.php`](https://github.com/moodle/moodle/blob/main/lib/tests/other/todochecker.php).
 
 Finally, don't forget to add any MDL-12345 used by your TODOs (and @todos too, unless part of the [deprecation process](../deprecation/index.md), those are handled apart) to the "Review TODOs Epic": MDL-47779 (requires login to see the issues)
 
@@ -2058,6 +2070,10 @@ To get the full list of exception types, search for the regular expression 'clas
 
 Where appropriate, you should create new subclasses of moodle_exception for use in your code.
 
+<Since version="4.5" issueNumber="MDL-81903" />
+
+If you create a custom exception class it *may* live in the `classes/exception/` directory, and be namespaced in `<plugin>/exception/`
+
 A few notable exception types:
 
 - `moodle_exception`: base class for exceptions in Moodle. Use this when a more specific type is not appropriate.
@@ -2081,8 +2097,8 @@ Way before this coding-style guide was defined and agreed, a lot of code had bee
 In any case, in order to normalize the (progressive, non-critical) transition, a policy issue (MDL-43233) was created and agreed about. And these are the rules to apply to coding-style only changes:
 
 1. Related coding-style changes (same lines, a variable within a method/function, adjacent comments, etc.) within a real issue are allowed.
-1. Unrelated coding-style changes (other methods, blocks of code, comments, etc.) within a real issue are only accepted for master and in a separate commit.
-1. Coding-style only issues are only accepted for master along the first 2 months of every cycle.
+1. Unrelated coding-style changes (other methods, blocks of code, comments, etc.) within a real issue are only accepted for main and in a separate commit.
+1. Coding-style only issues are only accepted for main along the first 2 months of every cycle.
 
 ## Git commits
 
@@ -2131,4 +2147,4 @@ This document was drawn from the following sources:
 - [Coding](../../policies.md)
 - [CodeSniffer](../../policies/codingstyle/index.md)
 - [Code Checker plugin](https://moodle.org/plugins/local_codechecker)
-- [Accessibility coding guidelines](./accessibility#Moodle-related-accessibility-coding-guidelines)
+- [Accessibility coding guidelines](../accessibility.md#coding-standards)

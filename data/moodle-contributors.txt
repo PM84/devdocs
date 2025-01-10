@@ -8,6 +8,7 @@ Abdullah
 Abhijit
 Abhimanyu
 Abhishek
+Abila
 Abraham
 Ackermann
 Ackland-Snow
@@ -100,6 +101,7 @@ Ball
 Ballard
 Banerjee
 Bannister
+Barat
 Barbara
 Barberà
 Barker
@@ -110,6 +112,7 @@ Barrett
 Barry
 Bartel
 Basset
+Bastian
 Bateson
 Baudry
 Baxter
@@ -155,6 +158,7 @@ Brown
 Bruce
 Bruno
 Bruton
+Bruyen
 Bryan
 Buecker
 Bukhari
@@ -182,6 +186,7 @@ Castro
 Català
 Cathal
 Cenni
+Cerezal
 Chaffee
 Chambers
 Champ
@@ -237,6 +242,7 @@ Damiani
 Damien
 Damyon
 Dang
+DangHieu1407
 Dani
 Daniel
 Daniele
@@ -425,6 +431,7 @@ Hardin
 Harding
 Haridasan
 Harker
+Harry
 Hawkins
 Heena
 Hegedus
@@ -443,6 +450,7 @@ Hernández
 Herrmann
 Heywood
 Hien
+Hieu
 Hilton
 Hippisley
 Hiroto
@@ -463,6 +471,7 @@ Hunkler
 Hunt
 Huong
 Hutchinson
+Huynh
 Hämmerle
 Hübler
 ISHIKAWA
@@ -487,6 +496,7 @@ Jablon
 Jackson
 Jacob
 Jade
+Jahreis
 Jake
 Jakob
 Jakub
@@ -528,9 +538,11 @@ Jonathan
 Jonathon
 Jones
 Jordan
+JordanKrauseDE
 Jordao
 Jordi
 Jorgensen
+Jose
 Joseph
 Josh
 Josh.Aston
@@ -553,7 +565,9 @@ Kalinin
 Kania
 Kanika
 Karen
+Karjun
 Karl
+KarlReyesCatalyst
 Karmali
 Kassaei
 Kateryna
@@ -568,6 +582,7 @@ Kelty
 Kenneth
 Kenny
 Kepa
+Kethiri
 Kevin
 Khajuria
 Khattar
@@ -589,11 +604,13 @@ Korner
 Kornfeld
 Kosinski
 Koskela
+Kotlyar
 Krige
 Krishnan
 Krista
 Krister
 Kristian
+Kristiina.Bax
 Kucherov
 Kudelis
 Kudriavtsev
@@ -627,6 +644,7 @@ Levi
 Levy
 Lewis
 Leyva
+Liam
 Ligne
 Lillekjendlie
 Limekiller
@@ -636,8 +654,10 @@ Lloyd
 Lock
 Logan
 Loison
+Loong
 Lorenzo
 Luca
+Lucian
 Lukas
 Luke
 Lundberg
@@ -666,6 +686,7 @@ Marier
 Marina
 Marinetti
 Mario
+Marius
 Mark
 Markku
 Marsden
@@ -677,6 +698,7 @@ Marty
 Martín
 Mary
 Massart
+Massicotte
 Mastny
 Matamoros
 Materka
@@ -739,6 +761,7 @@ Monllaó
 Montesinos
 Moodle
 Moore
+Moran
 Moreau
 Moriana
 Morris
@@ -771,6 +794,7 @@ Neosi
 Netica
 Neumann
 Newman
+Nexterday
 Nghia
 Nguyen
 Nhan
@@ -787,6 +811,7 @@ Nießen
 Nigel
 Nikhil
 Nikita
+Nikolai
 Nikoloutsopoulos
 Nils
 Nina
@@ -864,11 +889,13 @@ Pinto
 Pisarev
 Piton
 Platts
+Poder
 Poggenpohl
 Pollak
 Poltawski
 Porritt
 Potenko
+Pound
 Powell
 PraiseSatan
 Prateek
@@ -897,6 +924,7 @@ Rasmussen
 Rawson
 Raymond
 Recio
+Reichert
 Reischmann
 Renaat
 Renaud
@@ -926,6 +954,7 @@ Rohan
 Rohith
 Roman
 Roperto
+Rosenbaum
 Rossco
 Rossiani
 Rougeth
@@ -959,8 +988,10 @@ Scaramuccia
 Schach
 Schillinger
 Schmadel
+Schmidt-Kuhl
 Schrenk
 Schroeder
+Schultz
 Schulz
 Scotson
 ScottVerbeek
@@ -1004,6 +1035,7 @@ Skoda
 Skylar
 Smith
 Sokolov
+Soler
 Solomon
 Soon-Systems
 Souto
@@ -1080,6 +1112,7 @@ Tomo
 Toni
 Tony
 Topfstedt
+Torrent
 Torres
 Totaram
 Travis
@@ -1094,6 +1127,7 @@ Troy
 Tsheke
 Tsukanov
 Tsuyuki
+Tuan
 Tuan.Dinh
 Tucker
 Tung
@@ -1105,6 +1139,7 @@ Umberto
 University
 Ureña
 Urzelai
+Uthayakumar
 Vadim
 Vaishnav
 Valerii
@@ -1131,6 +1166,7 @@ Vinnie
 Virgil
 Vishal
 Vitaly
+Vithusha
 Vlad
 Vladimir
 Vlasenko
@@ -1145,6 +1181,7 @@ Walker
 Wallis
 Wandachowicz
 Ward
+Warwicker
 Watson
 Webster
 Wedekind
@@ -1205,6 +1242,7 @@ Zoltán
 [Peter
 abgreeve
 acorbier
+adamson
 adamtpaw
 adamtppaw
 adpe
@@ -1256,6 +1294,7 @@ danghieu1407
 danielfetzer
 danmarsden
 danstowell
+david
 ddelblanco
 defacer
 deraadt
@@ -1264,6 +1303,7 @@ dhawes
 diml
 dinhloc
 djachenko
+djarrancotleanu
 dlnsk
 do-you-even-curl
 donal
@@ -1281,11 +1321,14 @@ ericmerrill
 ethem
 evlice
 evltuma
+ewallah
 exe-cutor
 fabmen
 fcbsd
 fdallet
+ferran
 ferran.recio
+ferranrecio
 fhuebler
 fiedorow
 flipman
@@ -1316,6 +1359,7 @@ info@eWallah.net
 info@ewallah.net
 inigozendegi
 ishatalkin
+jacob.viertel@wunderbyte.at
 james-cnz
 jamiepratt
 jamiesensei
@@ -1323,6 +1367,7 @@ jbeedell
 jerome
 jeromemoodle
 jfederico
+jfedericobn
 jgraham909
 jgutierr25
 jinhofer
@@ -1336,6 +1381,7 @@ jonathanharker
 joseph_rezeau
 jpuntd
 jrchamp
+juliavs85
 julmis
 jungwirr
 kaipe
@@ -1352,6 +1398,7 @@ lazydaisy
 les_kopari
 levy
 lfrodrigues
+lihidor
 liorgi
 lonecatz
 luizlaydner
@@ -1409,6 +1456,7 @@ poltawski
 ppichet
 prateeksachan
 ptrkmkl
+rajandangi
 rajesh
 ralf-bonn
 raortegar
@@ -1441,6 +1489,7 @@ stemiwe
 stevando
 stigbjarne
 stronk7
+tai.letan
 thepurpleblob
 thetrinity
 thompson697
@@ -1460,14 +1509,17 @@ uid536
 uid697
 unknown
 urs_hunkler
+vietlx426
 viettruongq
 villate
 vinhle
 vinkmar
+vlad.kidanov
 vpisabeywardana
 vthung
 vtos
 vyshane
+waleedhassan
 watcanz
 wehr
 whchuang

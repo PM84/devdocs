@@ -10,6 +10,9 @@ tags:
 
 | **Version name** | **Date** |
 |---|---|
+| [Moodle App 4.5.0](./app_releases/v4/v4.5.0) |  31 October 2024 |
+| [Moodle App 4.4.1](./app_releases/v4/v4.4.1) |  9 July 2024 |
+| [Moodle App 4.4.0](./app_releases/v4/v4.4.0) |  28 June 2024 |
 | [Moodle App 4.3.0](./app_releases/v4/v4.3.0) |  10 November 2023 |
 | [Moodle App 4.2.0](./app_releases/v4/v4.2.0) |  9 June 2023 |
 | [Moodle App 4.1.1](./app_releases/v4/v4.1.1) | 28 February 2023 |
@@ -17,6 +20,10 @@ tags:
 | [Moodle App 4.0.2](./app_releases/v4/v4.0.2) | 25 October 2022 |
 | [Moodle App 4.0.1](./app_releases/v4/v4.0.1) | 26 May 2022 |
 | [Moodle App 4.0.0](./app_releases/v4/v4.0.0) | 22 April 2022 |
+
+- From 4.0.0 to 4.3.0 it was based on Ionic 5 version.
+- On 4.4.0 the app was based on Ionic 7 version.
+- On 4.5.0 the app was based on Ionic 8 version.
 
 ## Moodle App 3.x
 
@@ -74,7 +81,7 @@ Version 2 was based on Ionic 1 and it supported Moodle versions from 2.4 onwards
 | [Moodle Mobile 2.3](./app_releases/v2/v2.3) | 8 October 2015 |
 | [Moodle Mobile 2.2](./app_releases/v2/v2.2) | 10 September 2015 |
 | [Moodle Mobile 2.1](./app_releases/v2/v2.1) | 28 August 2015 |
-| [Moodle Mobile 2.0](./app_releases/v2/v2.0) | 31 July 2015 | |
+| [Moodle Mobile 2.0](./app_releases/v2/v2.0) | 31 July 2015 |
 
 ## Moodle Mobile 1.x
 

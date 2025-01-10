@@ -8,8 +8,6 @@ tags:
 
 <!-- markdownlint-disable no-inline-html -->
 
-import { CodeDiff, ValidExample, InvalidExample } from '@site/src/components';
-
 In the following guide, you will learn how to migrate your styles from an older version of the app.
 
 However, keep in mind that not all your users will be using the latest version. We recommend that you keep your old CSS rules for older versions as indicated in the [Before starting the migration](#before-starting-the-migration) section. By doing so, users who haven't updated the app will continue seeing the same styles they had until now.
@@ -32,7 +30,7 @@ body.moodle-app-4-0 {
 }
 ```
 
-You can use these classes to target specific major and patch versions as well, so for example version 4.1.0 ships with `moodleapp-4`, `moodleapp-4-1`, and `moodleapp-4-1-0` classes. You can also use ionic versions to filter styles, such as `ionic3` or `ionic5`.
+You can use these classes to target specific major and patch versions as well, so for example version 4.1.0 ships with `moodleapp-4`, `moodleapp-4-1`, and `moodleapp-4-1-0` classes. You can also use ionic versions to filter styles, such as `ionic5` or `ionic8`.
 
 :::caution
 Notice that mode and version classes moved from the `body` tag to the `html` tag in version 4.1. Learn more about this when [upgrading from 4.0 to 4.1](#40-to-41).
@@ -43,6 +41,18 @@ Notice that mode and version classes moved from the `body` tag to the `html` tag
 You can follow the same process that is documented in the [Moodle App Remote Themes](../customisation/remote-themes.md#how-can-you-create-your-own-theme) page.
 
 Make sure to read it in order to understand how to style your application for newer versions of the app. If you're upgrading your styles, it is likely that the documentation has been updated since you read it. So we recommend taking a look even if you're already familiar with Remote Themes.
+
+## 4.4 to 4.5
+
+Ionic version has been upgraded to v8 (from v7). This shouldn't have any direct impact on remote themes, but please verify that they continue to function correctly.
+
+## 4.3 to 4.4
+
+Ionic version has been upgraded to v7 (from v5). This shouldn't have any direct impact in remote themes; but make sure that they are still working properly.
+
+## 4.2 to 4.3
+
+The only change to keep in mind for this release is that Font Awesome icons were upgraded to version 6.4.0. This shouldn't affect Remote Themes directly, but given that it affects the visuals aspects of the app, it could potentially be relevant.
 
 ## 4.1 to 4.2
 

@@ -9,7 +9,6 @@ toc_max_heading_level: 4
 description: Assign submission plugins allow you to define different ways for a student to submit their work
 ---
 
-import { Since } from '@site/src/components';
 import {
     SettingsPHP,
     LocalLib,
@@ -20,7 +19,7 @@ An assignment submission plugin is used to display custom form fields to a stude
 
 :::tip
 
-For a good reference implementation, see the [onlinetext](https://github.com/moodle/moodle/tree/master/mod/assign/submission/onlinetext) submission plugin included with core because it uses most of the features of submission plugins.
+For a good reference implementation, see the [onlinetext](https://github.com/moodle/moodle/tree/main/mod/assign/submission/onlinetext) submission plugin included with core because it uses most of the features of submission plugins.
 
 :::
 

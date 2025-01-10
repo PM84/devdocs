@@ -12,8 +12,6 @@ PHP has two types of profiler:
 - XHProf is a standard designed for capturing profile traces on live servers. It was originally designed by engineers at Facebook and is suitable for production environments.
 - [XDebug](http://www.xdebug.org/docs/profiler) is well known. and understood, and its trace output is supported by tools like [KCachegrind](http://kcachegrind.sourceforge.net/html/Home.html). It is not recommended for production environments.
 
-import { Since } from '@site/src/components';
-
 ## XHProf
 
 XHProf is both a standard, and a profiler itself. Support for the standard, and two of the standard implementations of it, are built into Moodle.
@@ -174,9 +172,9 @@ xdebug.trigger_value = ProfileMe
 
 :::
 
-When using a trigger to start xdebug, open any php page on your server in your browser having added `XDEBUG_PROFILE` parameter to URL string, for example `http://servername/moodle2/index.php?XDEBUG_PROFILE`.
+When using a trigger to start xdebug, open any php page on your server in your browser having added `XDEBUG_PROFILE` parameter to URL string, for example `http://servername/moodle2/index.php?XDEBUG_PROFILE=ProfileMe`.
 
-If that page already has some parameters, just add our trigger to the URL end, for example: `http://servername/moodle2/mod/forum/view.php?id=5&XDEBUG_PROFILE`.
+If that page already has some parameters, just add our trigger to the URL end, for example: `http://servername/moodle2/mod/forum/view.php?id=5&XDEBUG_PROFILE=ProfileMe`.
 
 The profile should be generated in the directory you specified with `xdebug.output_dir` directive:
 

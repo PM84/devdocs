@@ -113,7 +113,7 @@ In PhpStorm or IntelliJ you can install the behat extension. Then you get auto c
 
 Most of the steps requires values, there are methods to provide values to steps, the method depends on the step specification.
 
-- **A string/text** is the most common case, the texts are wrapped between double quotes (`"` character) you have to replace the info about the expected value for your value; for example something like **I press "BUTTON_STRING"** should become **I press "Save and return to course"**. If you want to add a string which contains a " character, you can escape it with \", for example **I fill the "Name" field with "Alan alias \"the legend\""**. You can identify this steps because they ends with **_STRING**
+- **A string/text** is the most common case, the texts are wrapped between double quotes (`"` character) you have to replace the info about the expected value for your value; for example something like **I press "BUTTON_STRING"** should become **I press "Save and return to course"**. If you want to add a string which contains a " character, you can escape it with a backslash `\"`, for example **I fill the "Name" field with "Alan alias \\"the legend\\""**. You can identify this steps because they ends with **_STRING**
 - **A number** some steps requires numbers as values, to be more specific an undetermined number of digits from 0 to 9 (Natural numbers + 0) you can identify them because the expected value info string ends with **_NUMBER**
 - **A table**; is a relation between values, the most common use of it is to fill forms. The steps which requires tables are easily identifiable because they finish with **:** The steps description gives info about what the table columns must contain, for example **Fills a moodle form with field/value data**. Here you don't need to escape the double quotes if you want to include them as part of the value.
 - **A PyString** is a multiline string, most commonly used to fill out forms when a newline is required. Like steps with tables, steps which require PyStrings will end with ":"
@@ -302,7 +302,7 @@ There are two reasons why it is good to use these steps:
 It is possible to extend the `Given the following "entities" exist` step to support your plugin's data generators. This avoids having to write new whole
 new behat step definitions for your plugin, and allows you to re-use data generators between PHPUnit and Behat tests.
 
-Full documentation of this process and all available options can be found in the [PHPDoc for behat_generator_base](https://github.com/moodle/moodle/blob/1d4fdb0d1c60448104bc9eac79b5123863c67cbd/lib/behat/classes/behat_generator_base.php#L33). A core example of this can be found in [/mod/quiz/tests/generator](https://github.com/moodle/moodle/tree/master/mod/quiz/tests/generator) and [quiz_reset.feature](https://github.com/moodle/moodle/blob/1d4fdb0d1c60448104bc9eac79b5123863c67cbd/mod/quiz/tests/behat/quiz_reset.feature#L51). What follows is a simple example.
+Full documentation of this process and all available options can be found in the [PHPDoc for behat_generator_base](https://github.com/moodle/moodle/blob/1d4fdb0d1c60448104bc9eac79b5123863c67cbd/lib/behat/classes/behat_generator_base.php#L33). A core example of this can be found in [/mod/quiz/tests/generator](https://github.com/moodle/moodle/tree/main/mod/quiz/tests/generator) and [quiz_reset.feature](https://github.com/moodle/moodle/blob/1d4fdb0d1c60448104bc9eac79b5123863c67cbd/mod/quiz/tests/behat/quiz_reset.feature#L51). What follows is a simple example.
 
 To begin, you need a [generator](https://docs.moodle.org/dev/Writing_PHPUnit_tests#Generators) in `/*your*/*plugin*/tests/generator/lib.php`. If you are generating a type of entity called "thing", your generator will need a method called create_thing, which accepts an object:
 
@@ -351,6 +351,38 @@ This is most easily learned by looking at the examples that are already in the c
 In terms of making the Behat test work, it does not matter whether you use `@Given`, `@When` or `@Then`. However, to make your step understandable to people using your step, it is important to use the right word. Use `@Given` for steps that set things up, `@When` for steps that perform actions, and `@Then` for steps that verify what happened.
 
 When defining new Step definitions in your plugin, try to make sure the step name identifies it as belonging to your plugin. So, don't make a step called `I disable UI plugins`. Call it something like `I disable UI plugins in the CodeRunner question type`.
+
+### Deprecating a step definition
+
+Sometimes it may be desirable to remove a step definition, when it is no longer relevant due to interface changes, or when it is replaced by another step or named selector. As it is possible for other parts of the system to use any defined step, it is necessary to mark a step as deprecated before it is completely removed.
+
+To deprecate a step, create a new deprecated steps file in `tests/behat/behat_plugin_name_deprecated.php` with a class extending `behat_deprecated_base`. For example, from `qbank_comments`:
+
+```php title="tests/behat/qbank_comment_behat_deprecated.php"
+<?php
+require_once(__DIR__ . '/../../../../../lib/behat/behat_deprecated_base.php');
+
+class behat_qbank_comment_deprecated extends behat_deprecated_base {
+    /**
+     * Looks for the appropriate hyperlink comment count in the column.
+     *
+     * @Then I should see :arg1 on the comments column
+     * @param string $linkdata
+     * @deprecated Since Moodle 5.0 MDL-79122 in favour of the "qbank_comment > Comment count link" named selector.
+     * @todo Final removal in Moodle 6.0 MDL-82413.
+     */
+    public function i_should_see_on_the_column(string $linkdata): void {
+        $this->deprecated_message("Use '\"{$linkdata}\" \"qbank_comment > Comment count link\" should exist'");
+        $this->execute('behat_general::should_exist', [$linkdata, 'qbank_comment > Comment count link']);
+    }
+}
+```
+
+The deprecated step should call `$this->deprecated_message()` with a human readable example of what to do instead of using the deprecated step. It should then continue to perform its original behaviour (either using its original code, or by calling the step that replaces it) until it is completely removed.
+
+If a deprecated step is called in a test, it will fail and output the deprecation message. As a temporary measure, it is possible to run tests using deprecated steps by setting `$CFG->behat_usedeprecated` in config.php.
+
+A deprecated step should be documented and removed in accordance with the normal [deprecation process](../../policies/deprecation/index.md).
 
 ### Override behat core context for theme suite
 

@@ -28,6 +28,7 @@ Filepool
 Gapfill
 Gifreu
 GSOC
+Henrick
 IDEs
 IDOR
 IMSCP
@@ -35,6 +36,7 @@ InnoDB
 Invisio
 Ionicons
 Josep
+JMeter
 JWKS
 Kanban
 MAINNODE
@@ -55,6 +57,7 @@ Nextcloud
 Notas
 OCI8
 OIDC
+OPFS
 OWASP
 Oudtshoorn
 Packagist
@@ -69,6 +72,7 @@ RDBMS
 SIGINT
 SIGTERM
 Soulier
+Stene
 TCPDF
 TODO
 ToBic
@@ -89,6 +93,7 @@ allowcaching
 assignfeedback
 assignsubmission
 behat
+behats
 behatsnapshots
 bigbluebuttonbn
 bitand
@@ -184,17 +189,20 @@ intval
 invalidcoursemodule
 isempty
 isnotempty
+isoverallcomplete
 lable
 langindex
 lastaccess
 lastname
 lastruntime
+legacyclasses
 locallib
 loglevel
 mainmenu
 manageentries
 manageqbehaviours
 managetoken
+Matomo
 mathjax
 maxbytes
 mbstring
@@ -229,6 +237,7 @@ oldmoduleid
 onlinetext
 opcache
 otherfields
+outlinks
 pactivity
 passwordunmask
 pdftoppm
@@ -255,6 +264,7 @@ privatefiles
 protectusernames
 qeupgradehelper
 quizaccess
+quizaccessrule
 randomsamatch
 recordset
 recordsets
@@ -283,6 +293,7 @@ sitepolicynotagreed
 superglobals
 smallmessage
 splitview
+sqliteviewer
 stepslib
 strftimedate
 strikethrough
@@ -323,6 +334,7 @@ usertimezone
 varchar
 versionname
 videojs
+webapps
 webdav
 webserver
 webservice

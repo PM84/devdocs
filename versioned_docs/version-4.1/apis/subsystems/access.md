@@ -6,8 +6,6 @@ tags:
 
 <!-- cspell:ignore NEWMODULE -->
 
-import AcademyLink from '@site/src/components/AcademyLink';
-
 The Access API gives you functions so you can determine what the current user is allowed to do. It also allows plugins to extend Moodle with new capabilities.
 
 ## Overview
@@ -64,7 +62,7 @@ Where the meaning of array keys is:
 | ---                    | ---                                                                                                                                                                                                                                                                                                                                                               |
 | `riskbitmask`          | associated risks. These are explained on [Hardening new Roles system](./roles.md).                                                                                                                                                                                                                                                                                          |
 | `captype`              | _read_ or _write_ capability type, for security reasons system prevents all write capabilities for guest account and not-logged-in users                                                                                                                                                                                                                          |
-| `contextlevel`         | specified as context level constant. Declares the typical context level where this capability is checked. This capability can be checked with contexts that are at a lower level (e.g. `moodle/site:accessallgroups`                                                                                                                                              | could be checked with CONTEXT_MODULE). |
+| `contextlevel`         | specified as context level constant. Declares the typical context level where this capability is checked. This capability can be checked with contexts that are at a lower level (e.g. `moodle/site:accessallgroups` could be checked with CONTEXT_MODULE). |
 | `archetypes`           | specifies defaults for roles with standard archetypes, this is used in installs, upgrades and when resetting roles (it is recommended to use only CAP_ALLOW here).  Archetypes are defined in mdl_role table.  See also [Role archetypes](https://docs.moodle.org/dev/Role_archetypes).                                                                                                                      |
 | `clonepermissionsfrom` | when you are adding a new capability, you can tell Moodle to copy the permissions for each role from the current settings for another capability. This may give better defaults than just using archetypes for administrators who have heavily customised their roles configuration. The full syntax is: `clonepermissionsfrom` => `moodle/quiz:attempt` |
 
@@ -84,7 +82,7 @@ To mark a capability as deprecated, edit the access.php containing the capabilit
 
 Entries in `$deprecatedcapabilities` can have a `replacement` key indicating a new or existing capability that replaces the deprecated one. If this is specified, any checks to the deprecated capability will check the replacement capability instead. A debugging message will always be output at `DEBUG_DEVELOPER` level if a deprecated capability is checked.
 
-`$deprecatedcapaibilities` can also define an optional `message` explaining the deprecation.
+`$deprecatedcapabilities` can also define an optional `message` explaining the deprecation.
 
 The following example demonstrates an access.php file where a capability has been deprecated and replaced with another.
 

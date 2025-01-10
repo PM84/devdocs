@@ -2,8 +2,6 @@
 title: JavaScript
 ---
 
-import { Since, CodeBlock, TabItem, Tabs } from '@site/src/components';
-
 Moodle makes heavy use of JavaScript to improve the experience for its users.
 
 All new JavaScript in Moodle should use the ES2015+ module format, which is
@@ -37,7 +35,7 @@ available. You may find the following references particularly useful:
 
 JavaScript in Moodle is structured into ES2015 modules which are transpiled into the CommonJS format.
 
-Like our PHP classes and Mustache templates, our JavaScript modules each belong to a particular {term}`component`
+Like our PHP classes and Mustache templates, our JavaScript modules each belong to a particular `component`
 and must be named according to our standard [name and namespace conventions](/general/development/policies/naming#javascript).
 
 The naming scheme for Moodle's JavaScript fits into the pattern:
@@ -208,8 +206,8 @@ For example:
 ```js title="mod/example/lib/amd/src/local/helloworld/selectors.js"
 export default {
     actions: {
-        showAlertButton: '[data-action="mod_example/helloworld-update_button"],
-        bigRedButton: '[data-action="mod_example/helloworld-big_red_button"],
+        showAlertButton: '[data-action="mod_example/helloworld-update_button"]',
+        bigRedButton: '[data-action="mod_example/helloworld-big_red_button"]',
     },
 };
 ```

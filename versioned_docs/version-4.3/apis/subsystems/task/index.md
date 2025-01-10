@@ -65,11 +65,11 @@ If you catch an exception, then you become responsible for things that the task 
 For example, it is important to log all the details of the error, so problems can be investigated and fixed. The helper function
 `mtrace_exception` makes this easier. Also, you need to consider: if something has gone wrong with part of the processing, but other parts succeeded,
 should the overall state of the task run be success or failure? It will depend on how the task works, but you may need to ensure that the task
-ends by throwing an exception if any part failed. There is a an example of all this in the [`\quiz_statistics\task\recalculate`](https://github.com/moodle/moodle/blob/master/mod/quiz/report/statistics/classes/task/recalculate.php).
+ends by throwing an exception if any part failed. There is a an example of all this in the [`\quiz_statistics\task\recalculate`](https://github.com/moodle/moodle/blob/main/mod/quiz/report/statistics/classes/task/recalculate.php).
 
 ### Caches
 
-Historically many Moodle APIs have used static caches. Whilst many of these have been replaced by the [Moodle Universal Cache](https://docs.moodle.org/dev/Cache_API), which can be cleared between runs, it is not possible to guarantee that this is always the case.
+Historically many Moodle APIs have used static caches. Whilst many of these have been replaced by the [Moodle Universal Cache](/docs/apis/subsystems/muc/index.md), which can be cleared between runs, it is not possible to guarantee that this is always the case.
 
 When working with long-running tasks, you may need to consider caching - this applies to both scheduled, and adhoc, tasks. This is particularly true for tasks related to enrolment.
 
@@ -84,14 +84,6 @@ When scheduling a task to run in the background, or creating a scheduled task, t
 In the case of an adhoc task, you can call the [`set_userid`](./adhoc.md#running-as-a-specific-user) function when queueing the task.
 
 For scheduled tasks you should either pass the ID of the user to the `require_capability()` function, or use the `cron_setup_user()` function to switch to that user.
-
-### Legacy cron
-
-The older syntax of cron.php or modname_cron() is still supported, and will be removed in the near future. This is because:
-
-- the legacy cron functions run serially - a long running cron in one plugin will hold up the other plugins crons
-- the legacy cron functions are fragile - a failure in one cron in one plugin will prevent the cron in other functions from running at all
-- the scheduling cannot be changed by administrators
 
 ### Generating output
 
@@ -118,3 +110,17 @@ Several tools exist for administrators:
 - The task log viewer allows administrators to view logs from both adhoc and scheduled task runs
 - The scheduled task manager allows administrators to configure the time schedule for tasks
 - The 'Tasks running now' tool allows administrators to view key details of any task currently running
+
+## Important notes
+
+### Legacy cron
+
+<Since version="4.3" issueNumber="MDL-61165" />
+
+Support for an older syntax using `cron.php` or `modname_cron()` was removed in Moodle 4.3.
+
+:::caution
+
+All legacy cron features **must** be converted to Tasks.
+
+:::

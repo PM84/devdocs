@@ -28,8 +28,6 @@ For a component named `local_groupmanager` located in `local/groupmanager` which
 
 :::
 
-import { Since } from '@site/src/components';
-
 A service definition:
 
 - _must_ extend the `\core_external\external_api` class
@@ -108,7 +106,7 @@ class create_groups extends \core_external\external_api {
         require_capability('moodle/course:creategroups', $coursecontext);
 
         // Create the group using existing Moodle APIs.
-        $createdgroups = \local_groupmanager\util::create_groups($groups)
+        $createdgroups = \local_groupmanager\util::create_groups($groups);
 
         // Return a value as described in the returns function.
         return [
