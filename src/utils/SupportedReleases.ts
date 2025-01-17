@@ -23,7 +23,7 @@ const today = new Date();
 export interface versionInfo {
     name: string,
     releaseDate: string,
-    version: number,
+    version: boolean | number,
     notes?: string,
     releaseNoteUrl?: boolean | string,
     upgradePath?: boolean | string,
@@ -31,17 +31,22 @@ export interface versionInfo {
 
 export interface majorVersionData {
     name: string,
+    codeFreezeDate?: string,
     releaseDate: string,
     generalEndDate: string,
     securityEndDate: string,
     extendedSecurityEndDate?: string,
     isLTS: boolean,
+    isExperimental: boolean,
     releases?: Array<versionInfo>
 }
 
 export const isSupported = (versionData: majorVersionData): boolean => {
     if (versionData.extendedSecurityEndDate) {
         return (new Date(versionData.extendedSecurityEndDate)) > today;
+    } else if (versionData.isExperimental) {
+        // Do not display experimental releases in the version support info.
+        return false;
     }
 
     return (new Date(versionData.securityEndDate)) > today;

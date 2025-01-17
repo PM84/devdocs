@@ -9,7 +9,6 @@ tags:
 <!-- cspell:ignore timeend -->
 <!-- cspell:ignore unenrolment -->
 
-import { CodeBlock } from '@site/src/components';
 import {
     Lang,
     Lib,
@@ -65,7 +64,6 @@ import LibExample from '!!raw-loader!./_examples/lib.php';
     plugintype="enrol"
     pluginname="pluginname"
     example={LibExample}
-    // Not legacy for enrolment plugins.
     legacy={false}
     required
 >

@@ -15,11 +15,11 @@ This page lists all official releases of Moodle, grouped by branch in reverse ch
 
 ## Version support
 
-The most recent [long-term support release (LTS)](https://en.wikipedia.org/wiki/Long-term_support) version is Moodle 4.1. The next LTS version will be Moodle 4.5.
+The most recent [long-term support release (LTS)](https://en.wikipedia.org/wiki/Long-term_support) version is Moodle 4.5. The next LTS version will be Moodle 5.3.
 
 <SupportedReleases />
 
-![Release graph summarising the currently supported Moodle releases in a visual form](_releases/4033_release_graph.png)
+![Release graph summarising the currently supported Moodle releases in a visual form](_releases/4051_release_graph.png)
 
 <details>
     <summary>Release graph key</summary>
@@ -74,7 +74,7 @@ The most recent [long-term support release (LTS)](https://en.wikipedia.org/wiki/
 These are the target dates for releases. These dates may vary slightly due to unforeseen circumstances.
 
 | Release type | Frequency | Months | Timing |
-| --- | --- | --- |
+| --- | --- | --- | --- |
 | [Major](./development/process.md#major-release-cycles) (eg. 3.x) | 6 monthly | April, and October | Weeks 17, and 43 of the year |
 | [Minor](./development/process.md#stable-maintenance-cycles) (Point) (eg. 3.x.y) | 2 monthly | February, April, June, August, October, December | Usually every 8 weeks |
 
@@ -90,13 +90,48 @@ Minor releases dates differ slightly from release to release depending on the ti
 
 :::
 
+## Moodle 4.6 (Experimental)
+
+Please note that Moodle 4.6 is an experimental version integrating MDL-71378 with the Moodle 4.5.x code, intended as a preview and testing release.  It is not recommended that it be used as part of general production.
+
+<ReleaseTable releaseName="4.6" />
+
+:::info
+
+Bug fixes for general core bugs in 4.6.x will end 14 April 2025 (4 months).<br/>
+Bug fixes for security issues in 4.6.x will end 14 April 2025 (4 months).
+
+:::
+
+## Moodle 4.5 (LTS)
+
+<ReleaseTable releaseName="4.5" />
+
+:::info
+
+Bug fixes for general core bugs in 4.5.x will end 6 October 2025 (12 months).<br/>
+Bug fixes for security issues in 4.5.x will end October 2027 (36 months).
+
+:::
+
+## Moodle 4.4
+
+<ReleaseTable releaseName="4.4" />
+
+:::info
+
+Bug fixes for general core bugs in 4.4.x will end 21 April 2025 (12 months).<br/>
+Bug fixes for security issues in 4.4.x will end 8 December 2025 (18 months).
+
+:::
+
 ## Moodle 4.3
 
 <ReleaseTable releaseName="4.3" />
 
 :::info
 
-Bug fixes for general core bugs in 4.3.x will end 7 October 2024 (12 months).<br/>
+Bug fixes for general core bugs in 4.3.x ended 7 October 2024 (12 months).<br/>
 Bug fixes for security issues in 4.3.x will end 21 April 2025 (18 months).
 
 :::
@@ -107,8 +142,8 @@ Bug fixes for security issues in 4.3.x will end 21 April 2025 (18 months).
 
 :::info
 
-Bug fixes for general core bugs in 4.2.x will end 22 April 2024 (12 months).<br/>
-Bug fixes for security issues in 4.2.x will end 7 October 2024 (18 months).
+Bug fixes for general core bugs in 4.2.x ended 22 April 2024 (12 months).<br/>
+Bug fixes for security issues in 4.2.x ended 7 October 2024 (18 months).
 
 :::
 

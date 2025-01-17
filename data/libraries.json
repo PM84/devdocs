@@ -10,19 +10,22 @@
         "customised": false
     },
     {
-        "copyrightHolders": [],
-        "location": "admin/tool/mfa/factor/totp/extlib/Assert",
-        "name": "Assert",
-        "version": "2.1",
-        "license": "MIT",
-        "repository": "https://github.com/beberlei/assert",
+        "copyrightHolders": [
+            "The Roundcube Dev Team"
+        ],
+        "location": "admin/tool/messageinbound/roundcube",
+        "name": "Roundcube Framework",
+        "version": "1.6.6",
+        "license": "GPL",
+        "licenseversion": "3.0+",
+        "repository": "https://github.com/roundcube/roundcubemail",
         "customised": false
     },
     {
         "copyrightHolders": [],
         "location": "admin/tool/mfa/factor/totp/extlib/OTPHP",
         "name": "OTPHP",
-        "version": "9.1.1",
+        "version": "11.3.0",
         "license": "MIT",
         "repository": "https://github.com/Spomky-Labs/otphp",
         "customised": false
@@ -31,7 +34,7 @@
         "copyrightHolders": [],
         "location": "admin/tool/mfa/factor/totp/extlib/ParagonIE/ConstantTime",
         "name": "Constant-Time Encoding",
-        "version": "2.1.1",
+        "version": "3.0.0",
         "license": "MIT",
         "repository": "https://github.com/paragonie/constant_time_encoding",
         "customised": false
@@ -55,7 +58,7 @@
         "location": "auth/cas/CAS",
         "name": "CAS",
         "description": "phpCAS library to support CAS authentication plugin.",
-        "version": "1.6.0",
+        "version": "1.6.1",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/apereo/phpCAS",
@@ -87,7 +90,7 @@
         "location": "filter/codehighlighter/amd/src/prism.js",
         "name": "PrismJS",
         "description": "Prism is a lightweight, robust, and elegant syntax highlighting library. It's a spin-off project from Dabblet.",
-        "version": "1.16.0",
+        "version": "1.29.0",
         "license": "MIT",
         "repository": "https://github.com/PrismJS/prism",
         "customised": false
@@ -109,10 +112,10 @@
         "copyrightHolders": [
             "Joubel"
         ],
-        "location": "h5p/h5plib/v126/joubel/core",
+        "location": "h5p/h5plib/v127/joubel/core",
         "name": "h5p-php-library",
         "description": "The general H5P library.",
-        "version": "1.26",
+        "version": "moodle-1.27.0",
         "license": "GPL",
         "licenseversion": "3.0+",
         "repository": "https://github.com/h5p/h5p-php-library/",
@@ -122,10 +125,10 @@
         "copyrightHolders": [
             "Joubel"
         ],
-        "location": "h5p/h5plib/v126/joubel/editor",
+        "location": "h5p/h5plib/v127/joubel/editor",
         "name": "h5p-editor-php-library",
         "description": "A general library that is supposed to be used in most PHP implementations of H5P.",
-        "version": "moodle-1.23",
+        "version": "moodle-1.27.0",
         "license": "GPL",
         "licenseversion": "3.0+",
         "repository": "https://github.com/h5p/h5p-editor-php-library/",
@@ -165,7 +168,7 @@
         "location": "lib/amd/src/chartjs-lazy.js",
         "name": "Chart.js",
         "description": "Simple yet flexible JavaScript charting for designers & developers.",
-        "version": "4.4.0",
+        "version": "4.4.7",
         "license": "MIT",
         "repository": "https://github.com/chartjs/Chart.js",
         "customised": true
@@ -177,7 +180,7 @@
         "location": "lib/amd/src/loglevel.js",
         "name": "loglevel.js",
         "description": "Minimal lightweight simple logging for JavaScript.",
-        "version": "1.8.1",
+        "version": "1.9.1",
         "license": "MIT",
         "repository": "https://github.com/pimterry/loglevel/",
         "customised": false
@@ -235,7 +238,7 @@
         "location": "lib/aws-sdk",
         "name": "AWS SDK for PHP",
         "description": "The AWS SDK for PHP library",
-        "version": "3.277.11",
+        "version": "3.318.0",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/aws/aws-sdk-php",
@@ -243,12 +246,12 @@
     },
     {
         "copyrightHolders": [
-            "2005, Jon Papaioannou"
+            "Deque Systems, Inc."
         ],
         "location": "lib/behat/axe",
         "name": "axe-core",
         "description": "Accessibility testing engine for websites and other HTML-based user interfaces.",
-        "version": "4.7.2",
+        "version": "4.10.0",
         "license": "MPL",
         "licenseversion": "2.0",
         "repository": "https://github.com/dequelabs/axe-core",
@@ -274,7 +277,7 @@
         "location": "lib/editor/atto/plugins/html/yui/src/beautify",
         "name": "jsbeautify",
         "description": "Beautify HTML code in Atto.",
-        "version": "1.14.7",
+        "version": "1.15.1",
         "license": "MIT",
         "repository": "https://github.com/beautify-web/js-beautify",
         "customised": false
@@ -284,7 +287,7 @@
         "location": "lib/editor/atto/plugins/html/yui/src/codemirror",
         "name": "codemirror",
         "description": "CodeMirror is a versatile text editor implemented in JavaScript for the browser.",
-        "version": "5.65.15",
+        "version": "5.65.16",
         "license": "MIT",
         "repository": "https://github.com/codemirror/codemirror5",
         "customised": false
@@ -305,7 +308,7 @@
         "copyrightHolders": [],
         "location": "lib/editor/tiny/js/tinymce",
         "name": "Tiny",
-        "version": "6.6.2",
+        "version": "6.8.3",
         "license": "MIT",
         "repository": "https://github.com/tinymce/tinymce",
         "customised": false
@@ -315,9 +318,9 @@
         "location": "lib/editor/tiny/plugins/html/amd/src/beautify",
         "name": "js-beautify",
         "description": "Beautifier for javascript.",
-        "version": "1.14.8",
+        "version": "1.15.1",
         "license": "MIT",
-        "repository": "https://github.com/beautify-web/js-beautify/",
+        "repository": "https://github.com/beautifier/js-beautify/",
         "customised": false
     },
     {
@@ -331,13 +334,123 @@
         "customised": false
     },
     {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/autocomplete",
+        "description": "Autocompletion for the CodeMirror code editor.",
+        "version": "6.16.0",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/autocomplete",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/commands",
+        "description": "Collection of editing commands for the CodeMirror code editor.",
+        "version": "6.5.0",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/commands",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/lang-css",
+        "description": "CSS language support for the CodeMirror code editor.",
+        "version": "6.2.1",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/lang-css",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/lang-html",
+        "description": "HTML language support for the CodeMirror code editor.",
+        "version": "6.4.9",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/lang-html",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/lang-javascript",
+        "description": "JavaScript language support for the CodeMirror code editor.",
+        "version": "6.2.2",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/lang-javascript",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/lang-xml",
+        "description": "XML language support for the CodeMirror code editor.",
+        "version": "6.1.0",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/lang-xml",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/language",
+        "description": "Language support infrastructure for the CodeMirror code editor.",
+        "version": "6.10.1",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/language",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/lint",
+        "description": "Linting support for the CodeMirror code editor.",
+        "version": "6.7.1",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/lint",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/search",
+        "description": "Search functionality for the CodeMirror code editor.",
+        "version": "6.5.6",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/search",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/state",
+        "description": "Editor state data structures for the CodeMirror code editor.",
+        "version": "6.4.1",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/state",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/editor/tiny/plugins/html/amd/src/codemirror-lazy.js",
+        "name": "codemirror/view",
+        "description": "DOM view component for the CodeMirror code editor.",
+        "version": "6.26.3",
+        "license": "MIT",
+        "repository": "https://github.com/codemirror/view",
+        "customised": false
+    },
+    {
         "copyrightHolders": [
             "2013 Cal Henderson"
         ],
         "location": "lib/emoji-data",
         "name": "Emoji data",
         "description": "Library to parse easily data and sprite sheets for emoji.",
-        "version": "15.0.1",
+        "version": "15.1.2",
         "license": "MIT",
         "repository": "https://github.com/iamcal/emoji-data/",
         "customised": true
@@ -361,7 +474,7 @@
         "location": "lib/fonts",
         "name": "Font Awesome - http://fontawesome.com",
         "description": "The Font Awesome font. Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators.",
-        "version": "6.4.0",
+        "version": "6.5.2",
         "license": "SIL OFL",
         "licenseversion": "1.1",
         "repository": "https://github.com/FortAwesome/Font-Awesome",
@@ -377,6 +490,15 @@
         "version": "1.1.2",
         "license": "MIT",
         "repository": "https://github.com/RedeyeGroup/geopattern-php",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/giggsey/libphonenumber-for-php-lite",
+        "name": "libphonenumber for PHP (Lite)",
+        "version": "8.13.31",
+        "license": "Apache 2.0",
+        "repository": "https://github.com/giggsey/libphonenumber-for-php-lite",
         "customised": false
     },
     {
@@ -406,7 +528,7 @@
         "location": "lib/guzzlehttp/guzzle",
         "name": "GuzzleHttp/Guzzle",
         "description": "Guzzle is a PHP HTTP client library",
-        "version": "7.5.0",
+        "version": "7.8.1",
         "license": "MIT",
         "repository": "https://github.com/guzzle/guzzle",
         "customised": false
@@ -416,7 +538,7 @@
         "location": "lib/guzzlehttp/kevinrob/guzzlecache",
         "name": "Guzzle cache middleware",
         "description": "A HTTP Cache for Guzzle as a simple Middleware to be added in the HandlerStack.",
-        "version": "4.0.2",
+        "version": "5.1.0",
         "license": "MIT",
         "repository": "https://github.com/Kevinrob/guzzle-cache-middleware",
         "customised": false
@@ -426,7 +548,7 @@
         "location": "lib/guzzlehttp/promises",
         "name": "GuzzleHttp/Promises",
         "description": "Guzzle promises library",
-        "version": "1.5.2",
+        "version": "2.0.2",
         "license": "MIT",
         "repository": "https://github.com/guzzle/promises",
         "customised": false
@@ -436,23 +558,10 @@
         "location": "lib/guzzlehttp/psr7",
         "name": "GuzzleHttp/PSR7",
         "description": "PSR-7 message implementation that also provides common utility methods",
-        "version": "2.4.3",
+        "version": "2.6.2",
         "license": "MIT",
         "repository": "https://github.com/guzzle/psr7",
         "customised": false
-    },
-    {
-        "copyrightHolders": [
-            "Horde LLC"
-        ],
-        "location": "lib/horde",
-        "name": "Horde",
-        "description": "Library used by the inbound e-mail handling system.",
-        "version": "5.2.23",
-        "license": "LGPL/BSD",
-        "licenseversion": "2.1",
-        "repository": "https://github.com/horde/base",
-        "customised": true
     },
     {
         "copyrightHolders": [
@@ -461,7 +570,7 @@
         "location": "lib/html2text",
         "name": "HTML2Text",
         "description": "PHP script to convert HTML into an approximate text equivalent.",
-        "version": "4.3.1",
+        "version": "4.3.2",
         "license": "GPL",
         "licenseversion": "2.0+",
         "repository": "https://github.com/mtibben/html2text",
@@ -472,7 +581,7 @@
         "location": "lib/htmlpurifier",
         "name": "HTML Purifier",
         "description": "Filters HTML.",
-        "version": "4.16.0",
+        "version": "4.17.0",
         "license": "LGPL",
         "licenseversion": "2.1+",
         "repository": "https://github.com/ezyang/htmlpurifier",
@@ -485,7 +594,7 @@
         "location": "lib/jmespath",
         "name": "JMESPath",
         "description": "The JMESPath library",
-        "version": "2.6.1",
+        "version": "2.7.0",
         "license": "MIT",
         "repository": "https://github.com/jmespath/jmespath.php",
         "customised": false
@@ -518,7 +627,7 @@
         "copyrightHolders": [],
         "location": "lib/laravel/serializable-closure",
         "name": "Serializable Closure",
-        "version": "1.3.2",
+        "version": "1.3.3",
         "license": "MIT",
         "repository": "https://github.com/laravel/serializable-closure",
         "customised": false
@@ -530,7 +639,7 @@
         "location": "lib/lti1p3",
         "name": "LTI 1.3 Tool Library",
         "description": "A library used for building IMS-certified LTI 1.3 tool providers in PHP.",
-        "version": "5.4.1",
+        "version": "6.0.0",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/packbackbooks/lti-1-3-php-library",
@@ -569,7 +678,7 @@
         "location": "lib/maxmind/GeoIp2",
         "name": "GeoIP2 PHP API",
         "description": "Library for processing of GeoIP data files.",
-        "version": "2.13.0",
+        "version": "3.0.0",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/maxmind/GeoIP2-php",
@@ -582,7 +691,7 @@
         "location": "lib/maxmind/MaxMind",
         "name": "MaxMind DB Reader API",
         "description": "PHP API for reading MaxMind DB files.",
-        "version": "1.11.0",
+        "version": "1.11.1",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/maxmind/MaxMind-DB-Reader-php/",
@@ -593,7 +702,7 @@
         "location": "lib/minify/matthiasmullie-minify",
         "name": "MatthiasMullie\\Minify",
         "description": "CSS & JavaScript minifier, in PHP",
-        "version": "1.3.71",
+        "version": "1.3.73",
         "license": "MIT",
         "repository": "https://github.com/matthiasmullie/minify",
         "customised": true
@@ -633,13 +742,23 @@
         "customised": true
     },
     {
+        "copyrightHolders": [],
+        "location": "lib/nikic/fast-route",
+        "name": "FastRoute",
+        "version": "1.3.0",
+        "license": "BSD",
+        "licenseversion": "3-Clause",
+        "repository": "https://github.com/nikic/FastRoute",
+        "customised": false
+    },
+    {
         "copyrightHolders": [
             "OpenSpout"
         ],
         "location": "lib/openspout",
         "name": "OpenSpout",
         "description": "Library to read and write spreadsheet files (CSV, XLSX and ODS).",
-        "version": "4.15.0",
+        "version": "4.23.0",
         "license": "MIT",
         "repository": "https://github.com/openspout/openspout",
         "customised": false
@@ -743,9 +862,9 @@
             "2011, Neuman Vong"
         ],
         "location": "lib/php-jwt",
-        "name": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP, conforming to RFC 7519",
+        "name": "PHP-JWT",
         "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP, conforming to RFC 7519",
-        "version": "6.8.1",
+        "version": "6.10.0",
         "license": "BSD",
         "licenseversion": "3-Clause",
         "repository": "https://github.com/firebase/php-jwt",
@@ -758,7 +877,7 @@
         "location": "lib/phpmailer",
         "name": "PHPMailer",
         "description": "Class for sending email using either sendmail, PHP mail(), or SMTP. Methods are based upon the standard AspEmail(tm) classes.",
-        "version": "6.8.0",
+        "version": "6.9.1",
         "license": "LGPL",
         "licenseversion": "2.1",
         "repository": "https://github.com/PHPMailer/PHPMailer",
@@ -766,7 +885,7 @@
     },
     {
         "copyrightHolders": [],
-        "location": "lib/phpspreadsheet",
+        "location": "lib/phpspreadsheet/phpspreadsheet",
         "name": "PhpSpreadsheet",
         "description": "Library to read, write and create spreadsheet documents in PHP.",
         "version": "1.29.0",
@@ -842,6 +961,16 @@
     },
     {
         "copyrightHolders": [],
+        "location": "lib/psr/clock",
+        "name": "clock",
+        "description": "Clock Interface (PHP FIG PSR-20).",
+        "version": "1.0.0",
+        "license": "MIT",
+        "repository": "https://github.com/php-fig/clock",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
         "location": "lib/psr/container",
         "name": "container",
         "description": "Common Container Interface (PHP FIG PSR-11).",
@@ -865,7 +994,7 @@
         "location": "lib/psr/http-client",
         "name": "http-client",
         "description": "Provides an abstraction that describe the components of a HTTP Client.",
-        "version": "1.0.0",
+        "version": "1.0.3",
         "license": "MIT",
         "repository": "https://github.com/php-fig/http-client",
         "customised": false
@@ -875,7 +1004,7 @@
         "location": "lib/psr/http-factory",
         "name": "http-factory",
         "description": "Provides interfaces that describe the components of a HTTP Factory.",
-        "version": "1.0.1",
+        "version": "1.1.0",
         "license": "MIT",
         "repository": "https://github.com/php-fig/http-factory",
         "customised": false
@@ -885,9 +1014,49 @@
         "location": "lib/psr/http-message",
         "name": "http-message",
         "description": "Provide a set of common interfaces for HTTP messages as described in RFC 7230 and RFC 7231",
-        "version": "1.0.1",
+        "version": "2.0.0",
         "license": "MIT",
         "repository": "https://github.com/php-fig/http-message",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/psr/http-server-handler",
+        "name": "psr/http-server-handler",
+        "description": "Common interface for HTTP server-side request handler",
+        "version": "1.0.2",
+        "license": "MIT",
+        "repository": "https://github.com/php-fig/http-server-handler",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/psr/http-server-middleware",
+        "name": "psr/http-server-middleware",
+        "description": "Common interface for HTTP server-side middleware",
+        "version": "1.0.2",
+        "license": "MIT",
+        "repository": "https://github.com/php-fig/http-server-middleware",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/psr/log",
+        "name": "log",
+        "description": "Common interface for logging libraries",
+        "version": "3.0.2",
+        "license": "MIT",
+        "repository": "https://github.com/php-fig/log",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/psr/simple-cache",
+        "name": "simple-cache",
+        "description": "Common interface for logging libraries",
+        "version": "3.0.0",
+        "license": "MIT",
+        "repository": "https://github.com/php-fig/simple-cache",
         "customised": false
     },
     {
@@ -946,10 +1115,28 @@
     },
     {
         "copyrightHolders": [],
+        "location": "lib/slim/slim",
+        "name": "Slim Framework",
+        "version": "4.13.0",
+        "license": "MIT",
+        "repository": "https://github.com/slimphp/Slim",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
+        "location": "lib/spatie/php-cloneable",
+        "name": "PHP Cloneable",
+        "version": "1.0.2",
+        "license": "MIT",
+        "repository": "https://github.com/spatie/php-cloneable",
+        "customised": false
+    },
+    {
+        "copyrightHolders": [],
         "location": "lib/symfony/deprecation-contracts",
         "name": "Symfony Deprecation contracts",
         "description": "A generic function and convention to trigger deprecation notices",
-        "version": "3.1.1",
+        "version": "3.5.0",
         "license": "MIT",
         "repository": "https://github.com/symfony/deprecation-contracts",
         "customised": false
@@ -962,7 +1149,7 @@
         "location": "lib/tcpdf",
         "name": "TCPDF",
         "description": "Class to generate PDF files",
-        "version": "6.6.5",
+        "version": "6.7.5",
         "license": "LGPL",
         "licenseversion": "3.0-or-later",
         "repository": "https://github.com/tecnickcom/TCPDF",
@@ -981,9 +1168,9 @@
     },
     {
         "copyrightHolders": [],
-        "location": "lib/webauthn/src",
+        "location": "lib/webauthn",
         "name": "WebAuthn",
-        "version": "2.0.1",
+        "version": "2.1.1",
         "license": "MIT",
         "repository": "https://github.com/lbuchs/WebAuthn",
         "customised": false
@@ -1035,21 +1222,21 @@
         "location": "lib/zipstream",
         "name": "ZipStream-PHP",
         "description": "PHP ZIP Streaming Library",
-        "version": "2.4.0",
+        "version": "3.1.0",
         "license": "MIT",
         "repository": "https://github.com/maennchen/ZipStream-PHP",
         "customised": false
     },
     {
         "copyrightHolders": [
-            "Brion Vibber"
+            "Brooke Vibber"
         ],
         "location": "media/player/videojs/amd/src/local/ogv/ogv.js",
         "name": "ogv.js",
         "description": "Javascript media decoder and player for Ogg Vorbis/Opus/Theora and WebM VP8/VP9/AV1 video.",
-        "version": "1.8.9",
+        "version": "1.9.0",
         "license": "MIT",
-        "repository": "https://github.com/brion/ogv.js/",
+        "repository": "https://github.com/bvibber/ogv.js",
         "customised": false
     },
     {
@@ -1059,7 +1246,7 @@
         "location": "media/player/videojs/amd/src/video-lazy.js",
         "name": "VideoJS",
         "description": "JavaScript library that makes it easier to work with and build on HTML5 video.",
-        "version": "8.3.0",
+        "version": "8.17.3",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/videojs/video.js",
@@ -1084,21 +1271,21 @@
         "location": "media/player/videojs/amd/src/Youtube-lazy.js",
         "name": "videojs-youtube",
         "description": "YouTube Playback Technology for Video.js.",
-        "version": "3.0.0",
+        "version": "3.0.1",
         "license": "MIT",
         "repository": "https://github.com/videojs/videojs-youtube",
         "customised": false
     },
     {
         "copyrightHolders": [
-            "Brion Vibber"
+            "Brooke Vibber"
         ],
         "location": "media/player/videojs/ogvjs",
         "name": "ogv.js support files",
         "description": "JavaScript media decoder and player for Ogg Vorbis/Opus/Theora and WebM VP8/VP9/AV1 video.",
-        "version": "1.8.9",
+        "version": "1.9.0",
         "license": "MIT",
-        "repository": "https://github.com/brion/ogv.js/",
+        "repository": "https://github.com/bvibber/ogv.js",
         "customised": false
     },
     {
@@ -1108,7 +1295,7 @@
         "location": "media/player/videojs/videojs",
         "name": "VideoJS support files",
         "description": "JavaScript library that makes it easier to work with and build on HTML5 video",
-        "version": "8.3.0",
+        "version": "8.17.3",
         "license": "Apache",
         "licenseversion": "2.0",
         "repository": "https://github.com/videojs/video.js",
@@ -1121,7 +1308,7 @@
         "location": "mod/assign/feedback/editpdf/fpdi",
         "name": "FPDI",
         "description": "Collection of PHP classes facilitating developers to read pages from existing PDF documents and use them as templates in FPDF.",
-        "version": "2.3.7",
+        "version": "2.6.0",
         "license": "MIT",
         "repository": "https://github.com/Setasign/FPDI",
         "customised": false
@@ -1157,6 +1344,7 @@
             "2011-2021 The Bootstrap Authors"
         ],
         "location": "theme/boost/amd/src/bootstrap/button.js",
+        "name": "bootstrap-button",
         "description": "HTML, CSS, and JavaScript framework for developing responsive, mobile-first projects on the web.",
         "version": "4.6.2",
         "license": "MIT",
@@ -1340,7 +1528,7 @@
         "location": "theme/boost/scss/fontawesome",
         "name": "Font Awesome - http://fontawesome.com",
         "description": "Font Awesome CSS, LESS, and Sass files. Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators.",
-        "version": "6.4.0",
+        "version": "6.5.2",
         "license": "(MIT)",
         "repository": "https://github.com/FortAwesome/Font-Awesome",
         "customised": false

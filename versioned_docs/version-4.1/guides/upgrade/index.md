@@ -9,7 +9,6 @@ tags:
 The Upgrade API is a core API which allows your plugin to manage features of its own installation, and upgrade. Every plugin includes a [version](../../apis/commonfiles/version.php/index.md) which allows the Upgrade API to apply only the required changes.
 
 <!-- cspell:ignore myqtype, newcol, upgradelib, oldversion, savepoint -->
-import { ValidExample, InvalidExample } from '@site/src/components';
 
 Correct use of this API allows Moodle to automatically create, and handle upgrades for, your database tables and other core features during an upgrade.
 
@@ -33,7 +32,7 @@ The install.xml file describes the database tables that will be created when the
 
 :::important
 
-The content of the `install.xml` file **must** be created and maintained using the [XMLDB Editor](https://docs.moodle.org/dev/XMLDB_editor).
+The content of the `install.xml` file **must** be created and maintained using the [XMLDB Editor](/general/development/tools/xmldb).
 
 :::
 
@@ -43,7 +42,7 @@ The upgrade.php file describes the steps used to migrate the plugin from one ver
 
 :::important
 
-The content of the `upgrade.php` file **must** be created and maintained using the [XMLDB Editor](https://docs.moodle.org/dev/XMLDB_editor).
+The content of the `upgrade.php` file **must** be created and maintained using the [XMLDB Editor](/general/development/tools/xmldb).
 
 :::
 
@@ -167,11 +166,11 @@ In Moodle core, one of the standard simple rules is not to make any database cha
 
 :::warning Advanced
 
-Suppose, in order to fix a bug, you need to make a database change in the Moodle 4.0 stable branch (and the master branch targetting Moodle 4.1). The root of the problem is that people may upgrade their Moodle in three different ways, which
+Suppose, in order to fix a bug, you need to make a database change in the Moodle 4.0 stable branch (and the main branch targetting Moodle 4.1). The root of the problem is that people may upgrade their Moodle in three different ways, which
 
-- Upgrade from <=4.0.2 to 4.0.3 - this executes the upgrade script on the 4.0 branch.
-- Upgrade from <=4.0.2 directly to >=4.1 - this executes the upgrade script on the master branch.
-- Upgrade from 4.0.3 to >=4.1 - in this case, you must ensure that the upgrade on master is not executed.
+- Upgrade from \<=4.0.2 to 4.0.3 - this executes the upgrade script on the 4.0 branch.
+- Upgrade from \<=4.0.2 directly to >=4.1 - this executes the upgrade script on the main branch.
+- Upgrade from 4.0.3 to >=4.1 - in this case, you must ensure that the upgrade on main is not executed.
 
 The normal way to do this is ensure that your database upgrade is idempotent. That is, it does not matter if you do it twice. So for example, instead of doing
 

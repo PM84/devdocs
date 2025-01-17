@@ -9,8 +9,6 @@ tags:
   - PHP
 ---
 
-import { Since } from '@site/src/components';
-
 New PHP versions are [released every year](https://www.php.net/supported-versions.php) and come with important improvements and changes compared with previous versions. Moodle tries to support them as soon as possible, always matching them with our own [scheduled release plans](../../releases.md).
 
 ## Policy statement
@@ -22,10 +20,12 @@ We always follow this agreed policy regarding PHP and Moodle supported versions:
 1. A LTS will always **require the previous LTS** (or later) for upgrading.
 2. The **maximum PHP version** supported for a branch will be the max one achieved along the life of the branch. Usually with .0 releases but may happen later (we added support for php80 with 3.11.8, or support for php81 with 4.1.2, for example).
 3. The **minimum PHP** version supported for a branch will be **the lower of**:
-    - The [minimum version supported in any way by php](https://www.php.net/supported-versions.php) the day of the Moodle release (so we provide slow, progressive increments).
+    - The [minimum version supported in any way by php](https://www.php.net/supported-versions.php) that is under support for at least 12 more months when the new Moodle version gets released (so we provide slow, progressive increments).
     - The maximum PHP version supported by the previous LTS branch (so we guarantee jumping between LTS is possible without upgrading PHP at the same time).
 
-<details><summary>PHP and Moodle policy in Jira wiki markup format.</summary>
+<details>
+
+<summary>PHP and Moodle policy in Jira wiki markup format.</summary>
 
 ```txt
 {panel:title=Policy: PHP & Moodle supported versions|borderStyle=dashed|borderColor=#cccccc|titleBGColor=#f7d6c1|bgColor=#ffffce}
@@ -33,7 +33,7 @@ Since Moodle 3.5 (MDL-59159), these rules apply to decide Minimum PHP and Moodle
  # A LTS will always require the previous LTS (or later) for upgrading.
  # The maximum PHP version supported for a branch will be the max one achieved along the life of the branch. Usually with .0 releases but may happen later (we added support for php80 with 3.11.8, or support for php81 with 4.1.2, for example).
  # The minimum PHP version supported for a branch will be *the lower of*:
- -- The [minimum version supported in any way by php|http://php.net/supported-versions.php] the day of the Moodle release (so we provide slow, progressive increments).
+ -- The [minimum version supported in any way by php|http://php.net/supported-versions.php] that is under support for at least 12 more months when the new Moodle version gets released (so we provide slow, progressive increments).
  -- The maximum PHP version supported by the previous LTS branch (so we guarantee jumping between LTS is possible without upgrading PHP at the same time).{panel}
 ```
 
@@ -48,6 +48,12 @@ You must be logged in to tracker to see issues in Epics.
 :::
 
 ## PHP supported versions
+
+### PHP 8.3
+
+<Since versions={["4.4"]} issueNumber="MDL-76426" />
+
+PHP 8.3 **can be used with** Moodle 4.4 and later releases. See MDL-76426 for details.
 
 ### PHP 8.2
 
@@ -99,9 +105,9 @@ PHP 7.0 **can be used with** Moodle 3.0.1, Moodle 3.1 and later releases. It is 
 
 ## PHP versions under development
 
-### PHP 8.3
+### PHP 8.4
 
-PHP 8.3 support **is currently being implemented** for Moodle 4.4 and later releases. Hence it's still **incomplete and only for development purposes**. See MDL-76426 for details.
+PHP 8.4 support **is currently being implemented** for Moodle 5.0 and later releases. Hence it's still **incomplete and only for development purposes**. See MDL-80117 for details.
 
 ## See also
 

@@ -8,8 +8,6 @@ tags:
   - core_dml
 ---
 
-import { Since, ValidExample, InvalidExample } from '@site/src/components';
-
 This page describes the functions available to access data in the Moodle database. You should **exclusively** use these functions in order to retrieve or modify database content because these functions provide a high level of abstraction and guarantee that your database manipulation will work against different RDBMSes.
 
 Where possible, tricks and examples will be documented here in order to make developers' lives a bit easier. Of course, feel free to clarify, complete and add more information to this documentation. It will be welcome, absolutely!
@@ -97,7 +95,7 @@ $DB->get_record_sql(
 
 Some methods accept the <tt>$strictness</tt> parameter affecting the method behaviour. Supported modes are specified using the constants:
 
-- <tt>MUST_EXIST</tt> - In this mode, the requested record must exist and must be unique. An exception will be thrown if no record is found or multiple matching records are found.
+- <tt>MUST_EXIST</tt> - In this mode, the requested record must exist and must be unique. An exception `dml_missing_record_exception` will be thrown if no record is found or `dml_multiple_records_exception` if multiple matching records are found.
 - <tt>IGNORE_MISSING</tt> - In this mode, a missing record is not an error. False boolean is returned if the requested record is not found. If more records are found, a debugging message is displayed.
 - <tt>IGNORE_MULTIPLE</tt> - This is not a recommended mode. The function will silently ignore multiple records found and will return just the first one of them.
 
@@ -370,6 +368,18 @@ public function get_field_sql(
 
 ## Getting field values from multiple records
 
+### get_fieldset
+
+Return values of the given field from a table record as an array where all the given conditions are met.
+
+```php
+public function get_fieldset(
+    string $table,
+    string $return,
+    ?array $conditions = null
+);
+```
+
 ### get_fieldset_select
 
 Return values of the given field as an array where the given conditions are used in the WHERE clause.
@@ -638,7 +648,7 @@ try {
      // Assuming the both inserts work, we get to the following line.
      $transaction->allow_commit();
 
-} catch(Exception $e) {
+} catch (Exception $e) {
      $transaction->rollback($e);
 }
 ```
@@ -863,7 +873,7 @@ public function sql_compare_text(
 
 ```php title="Example"
 $comparedescription = $DB->sql_compare_text('description');
-$comparedescription = $DB->sql_compare_text(':description');
+$comparedescriptionplaceholder = $DB->sql_compare_text(':description');
 $todogroups = $DB->get_records_sql(
     "SELECT id FROM {group} WHERE {$comparedescription} = {$comparedescriptionplaceholder}",
     [

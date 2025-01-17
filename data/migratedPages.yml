@@ -13,6 +13,9 @@ Acceptance_testing/Browsers:
 Acceptance_testing/Browsers/Working_combinations_of_OS+Browser+selenium:
 - filePath: "/general/development/tools/behat/browsers/supportedbrowsers.md"
   slug: "/general/development/tools/behat/browsers/supportedbrowsers"
+Acceptance_testing/Contributing_automated_tests:
+- filePath: "/general/development/process/testing/qa.md"
+  slug: "/general/development/process/testing/qa#automating-a-test"
 Acceptance_testing_for_the_Moodle_App:
 - filePath: "/general/app/development/testing/acceptance-testing.md"
   slug: "/general/app/development/testing/acceptance-testing"
@@ -134,8 +137,11 @@ Course_formats:
 - filePath: "/docs/apis/plugintypes/format/index.md"
   slug: "/docs/apis/plugintypes/format"
 Creating_mobile_course_formats:
-- filePath: "/general/app/development/plugins-development-guide/examples/create-course-formats.md"
-  slug: "/general/app/development/plugins-development-guide/examples/create-course-formats"
+- filePath: "/general/app/development/plugins-development-guide/examples/course-formats.md"
+  slug: "/general/app/development/plugins-development-guide/examples/course-formats"
+Creating_mobile_question_types:
+- filePath: "/general/app/development/plugins-development-guide/examples/question-types.md"
+  slug: "/general/app/development/plugins-development-guide/examples/question-types"
 Credits:
 - filePath: "/general/community/credits/index.md"
   slug: "/general/community/credits"
@@ -184,12 +190,78 @@ Designing_usable_forms:
 Developer_FAQ:
 - filePath: "/general/development/abc/faq.md"
   slug: "/general/development/abc/faq"
+Developer_meeting_April_2019:
+- filePath: "/general/community/meetings/2019/04.md"
+  slug: "/general/community/meetings/2019/04"
+Developer_meeting_April_2020:
+- filePath: "/general/community/meetings/2020/04.md"
+  slug: "/general/community/meetings/2020/04"
+Developer_meeting_April_2021:
+- filePath: "/general/community/meetings/2021/04.md"
+  slug: "/general/community/meetings/2021/04"
 Developer_meeting_April_2022:
-- filePath: "/general/community/meetings/202204.md"
-  slug: "/general/community/meetings/202204"
+- filePath: "/general/community/meetings/2022/04.md"
+  slug: "/general/community/meetings/2022/04"
+Developer_meeting_August_2020:
+- filePath: "/general/community/meetings/2020/08.md"
+  slug: "/general/community/meetings/2020/08"
+Developer_meeting_August_2021:
+- filePath: "/general/community/meetings/2021/08.md"
+  slug: "/general/community/meetings/2021/08"
+Developer_meeting_December_2018:
+- filePath: "/general/community/meetings/2018/12.md"
+  slug: "/general/community/meetings/2018/12"
+Developer_meeting_December_2020:
+- filePath: "/general/community/meetings/2020/12.md"
+  slug: "/general/community/meetings/2020/12"
+Developer_meeting_December_2021:
+- filePath: "/general/community/meetings/2021/12.md"
+  slug: "/general/community/meetings/2021/12"
+Developer_meeting_February_2019:
+- filePath: "/general/community/meetings/2019/02.md"
+  slug: "/general/community/meetings/2019/02"
+Developer_meeting_February_2021:
+- filePath: "/general/community/meetings/2021/02.md"
+  slug: "/general/community/meetings/2021/02"
 Developer_meeting_February_2022:
-- filePath: "/general/community/meetings/202202.md"
-  slug: "/general/community/meetings/202202"
+- filePath: "/general/community/meetings/2022/02.md"
+  slug: "/general/community/meetings/2022/02"
+Developer_meeting_January_2019:
+- filePath: "/general/community/meetings/2019/01.md"
+  slug: "/general/community/meetings/2019/01"
+Developer_meeting_January_2020:
+- filePath: "/general/community/meetings/2020/01.md"
+  slug: "/general/community/meetings/2020/01"
+Developer_meeting_July_2018:
+- filePath: "/general/community/meetings/2018/07.md"
+  slug: "/general/community/meetings/2018/07"
+Developer_meeting_July_2019:
+- filePath: "/general/community/meetings/2019/07.md"
+  slug: "/general/community/meetings/2019/07"
+Developer_meeting_June_2020:
+- filePath: "/general/community/meetings/2020/06.md"
+  slug: "/general/community/meetings/2020/06"
+Developer_meeting_June_2021:
+- filePath: "/general/community/meetings/2021/06.md"
+  slug: "/general/community/meetings/2021/06"
+Developer_meeting_March_2019:
+- filePath: "/general/community/meetings/2019/03.md"
+  slug: "/general/community/meetings/2019/03"
+Developer_meeting_May_2019:
+- filePath: "/general/community/meetings/2019/05.md"
+  slug: "/general/community/meetings/2019/05"
+Developer_meeting_November_2018:
+- filePath: "/general/community/meetings/2018/11.md"
+  slug: "/general/community/meetings/2018/11"
+Developer_meeting_October_2019:
+- filePath: "/general/community/meetings/2019/10.md"
+  slug: "/general/community/meetings/2019/10"
+Developer_meeting_October_2020:
+- filePath: "/general/community/meetings/2020/10.md"
+  slug: "/general/community/meetings/2020/10"
+Developer_meeting_October_2021:
+- filePath: "/general/community/meetings/2021/10.md"
+  slug: "/general/community/meetings/2021/10"
 Developer_meetings:
 - filePath: "/general/community/meetings/index.md"
   slug: "/general/community/meetings"
@@ -246,6 +318,9 @@ Git_for_developers:
 Github_actions_integration:
 - filePath: "/general/development/tools/gha.md"
   slug: "/general/development/tools/gha"
+GlobalMoot_DevJam_Unconference_November_2019:
+- filePath: "/general/community/meetings/2018/global_devjam.md"
+  slug: "/general/community/meetings/2018/global_devjam"
 Groups:
 - filePath: "/docs/apis/subsystems/group/index.md"
   slug: "/docs/apis/subsystems/group/"
@@ -1330,17 +1405,14 @@ Moodle_App_Release_Notes:
 - filePath: "/general/app_releases.md"
   slug: "/general/app_releases"
 Moodle_App_Release_Process:
-- filePath: "/general/app/development/release-process.md"
-  slug: "/general/app/development/release-process"
+- filePath: "/general/development/process-moodleapp/release.md"
+  slug: "/general/development/process-moodleapp/release"
 Moodle_App_Remote_Themes:
 - filePath: "/general/app/customisation/remote-themes.md"
   slug: "/general/app/customisation/remote-themes"
 Moodle_App_Remote_Themes_Upgrade_Guide:
 - filePath: "/general/app/upgrading/remote-themes-upgrade-guide.md"
   slug: "/general/app/upgrading/remote-themes-upgrade-guide"
-Moodle_App_Scripts:_gulp_push:
-- filePath: "/general/app/development/scripts/gulp-push.md"
-  slug: "/general/app/development/scripts/gulp-push"
 Moodle_Development_kit:
 - filePath: "/general/development/tools/mdk.md"
   slug: "/general/development/tools/mdk"
@@ -1491,6 +1563,9 @@ Navigation_API:
 New_docs_version_process:
 - filePath: "/general/development/process/release/newuserdocs.md"
   slug: "/general/development/process/release/newuserdocs"
+New_feature_ideas:
+- filePath: "/general/community/contribute.md"
+  slug: "/general/community/contribute"
 Output_API:
 - filePath: "/docs/apis/subsystems/output/index.md"
   slug: "/docs/apis/subsystems/output"
@@ -1501,7 +1576,7 @@ Overview:
 - filePath: "/general/community/intro.md"
   slug: "/general/community"
 PHPUnit:
-- filePath: "/general/development/tools/phpunit.md"
+- filePath: "/general/development/tools/phpunit/index.md"
   slug: "/general/development/tools/phpunit"
 Peer_reviewing:
 - filePath: "/general/development/process/peer-review.md"
@@ -1683,6 +1758,9 @@ Testing_instructions_guide:
 Testing_of_integrated_issues:
 - filePath: "/general/development/process/testing/integrated-issues.md"
   slug: "/general/development/process/testing/integrated-issues"
+Themes_overview:
+- filePath: "/docs/apis/plugintypes/theme/index.md"
+  slug: "/docs/apis/plugintypes/theme/"
 Time_API:
 - filePath: "/docs/apis/subsystems/time/index.md"
   slug: "/docs/apis/subsystems/time/"

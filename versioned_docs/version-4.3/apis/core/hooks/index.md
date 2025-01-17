@@ -6,8 +6,6 @@ tags:
 - core
 ---
 
-import { Since } from '@site/src/components';
-
 <Since version="4.3" issueNumber="MDL-74954" />
 
 This page describes the Hooks API which is a replacement for some of the lib.php based one-to-many
@@ -102,7 +100,7 @@ If you define a hook which is _not_ in the `[component]\hook\*` namespace then y
 
 namespace mod_example;
 
-class hooks implements \core\hook\hook_discovery_agent {
+class hooks implements \core\hook\hook\discovery_agent {
     public static function discover_hooks(): array {
         return [
             [
@@ -154,7 +152,7 @@ Any guidelines for callback priority should be described in hook descriptions if
 :::important
 
 Callbacks _are executed during system installation and all upgrades_, the callback
-methods must verify the plugin is in correct state. Often the easies way is to
+methods must verify the plugin is in correct state. Often the easiest way is to
 use function during_initial_install() or version string from the plugin configuration.
 
 :::

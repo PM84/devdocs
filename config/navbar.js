@@ -15,6 +15,7 @@
  * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
  */
 const VersionsArchived = require('../versionsArchived.json');
+const nextVersionData = require('../nextVersion.js');
 
 const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
     0,
@@ -23,15 +24,15 @@ const ArchivedVersionsDropdownItems = Object.entries(VersionsArchived).splice(
 
 const navbar = {
     title: '',
-    // logo: {
-    //     alt: '',
-    //     src: 'img/Moodle.svg',
-    //     height: '35px',
-    //     width: '138px',
-    // },
+    logo: {
+        alt: '',
+        src: 'img/Moodle.svg',
+        height: '35px',
+        width: '138px',
+    },
     items: [
         {
-            to: '/docs',
+            to: nextVersionData.nextVersionRoot,
             label: 'Guides',
             position: 'left',
         },
@@ -39,15 +40,55 @@ const navbar = {
             to: '/general/community/contribute',
             label: 'Community',
             position: 'left',
+            activeBasePath: '/general/community',
         },
         {
-            to: '/general/development/gettingstarted',
-            label: 'Coding',
+            type: 'docSidebar',
             position: 'left',
+            sidebarId: 'coding',
+            label: 'Coding',
+            docsPluginId: 'general',
         },
         {
-            to: '/general/development/process',
-            label: 'Process',
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'process',
+            label: 'Processes',
+            docsPluginId: 'general',
+        },
+        {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'moodleapp',
+            label: 'Moodle App',
+            docsPluginId: 'general',
+        },
+        {
+            type: 'docSidebar',
+            position: 'left',
+            sidebarId: 'releaseNotes',
+            label: 'Releases',
+            docsPluginId: 'general',
+        },
+        {
+            type: 'dropdown',
+            label: 'Writing',
+            items: [
+                {
+                    type: 'docSidebar',
+                    // position: 'left',
+                    sidebarId: 'contentguidelines',
+                    label: 'Content guidelines',
+                    docsPluginId: 'general',
+                },
+                {
+                    type: 'docSidebar',
+                    // position: 'left',
+                    sidebarId: 'documentation',
+                    label: 'Documentation',
+                    docsPluginId: 'general',
+                },
+            ],
             position: 'left',
         },
 

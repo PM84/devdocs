@@ -123,6 +123,11 @@ const sidebars = {
                 id: 'development/abc',
             },
         },
+        {
+            label: 'Upgrade notes',
+            type: 'doc',
+            id: 'development/upgradenotes',
+        },
     ],
 
     documentation: [

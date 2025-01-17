@@ -7,7 +7,6 @@ tags:
 
 <!-- markdownlint-disable no-inline-html -->
 
-import { CodeBlock, CodeExample, InvalidExample, ValidExample, Since } from '@site/src/components';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
@@ -554,6 +553,20 @@ The SVG icons in Moodle LMS were sourced from https://fontawesome.com/search?m=f
 When adding SVG files from [FontAwesome](https://fontawesome.com/icons), please make sure to use the `Free` icon set by generating the file from the `SVG` code, rather than downloading it. This approach ensures the correct licensing of the icon, as the downloaded version may have a different license at times.
 :::
 
+## Cron and Tasks API
+
+### Legacy Cron
+
+<Since version="4.3" issueNumber="MDL-61165" />
+
+Support for the `cron.php` and `modname_cron` legacy cron system has been removed.
+
+:::caution
+
+All legacy cron tasks must now be converted to Tasks
+
+:::
+
 <!-- cspell:ignore goutte,browserkit -->
 ## Behat
 
@@ -590,3 +603,11 @@ public function add_custom_instance(stdClass $course, ?array $fields = null): ?i
 ```
 
 In [MDL-73839](https://tracker.moodle.org/browse/MDL-73839) cohort enrolment method has been updated to support CSV course upload.
+
+## Addition of comboboxsearch component
+
+<Since version="4.3" issueNumber="MDL-77991" />
+
+As part of [MDL-77991](https://tracker.moodle.org/browse/MDL-77991) multiple gradebook report searching functionalities were migrated into a centralised core component.
+
+Details on its use can be found via [Combobox searching](./guides/javascript/comboboxsearch)

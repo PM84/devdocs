@@ -24,8 +24,6 @@ We use a workflow that ensures that new code receives multiple reviews by differ
 - There is a dedicated team in Moodle HQ in charge of the [integration review](./process/integration/index.md), to ensure consistent quality across the codebase.
 - Every time an issue is integrated, the [testing](./process/testing/index.md) instructions are run by a dedicated team of testers.
 
-import { Since } from '@site/src/components';
-
 ## Roles
 
 A number of roles make this work:
@@ -137,7 +135,7 @@ The process of [new feature development](#new-feature-development) is described 
 
 ### Testing
 
-During development, as new code is integrated, automated testing conducted at the [code](./tools/phpunit.md) and [interface](./tools/behat/index.md) levels, to make sure there are no regressions caused by new features.
+During development, as new code is integrated, automated testing conducted at the [code](./tools/phpunit/index.md) and [interface](./tools/behat/index.md) levels, to make sure there are no regressions caused by new features.
 
 In the last month before the release, a feature freeze is called (no new features can be added) and volunteer testers from the Moodle community perform manual [QA testing](./process/testing/qa.md) of Moodle features. The current set of functional tests is listed in [MDLQA-1](https://tracker.moodle.org/browse/MDLQA-1). The list of tests is extended as new features are added, though we're also trying to reduce the number as more automated [acceptance tests](./tools/behat/index.md) are developed.
 
@@ -159,7 +157,7 @@ During each cycle there are a periods and events that occur between and around s
 A period during which the Roadmap is explored, specs are written and prototypes are created. Regressions in the recent release are fixed as they arise.
 
 **End sync period** <br/>
-During the [on-sync period](./process/integration/index.md#on-sync-period), the recent release and master versions are kept synchronised. No new code is added during this period, which ensures regressions are fixed rapidly. This also allows for planning and provides relief for developers after a release.
+During the [on-sync period](./process/integration/index.md#on-sync-period), the recent release and main versions are kept synchronised. No new code is added during this period, which ensures regressions are fixed rapidly. This also allows for planning and provides relief for developers after a release.
 
 **Personal projects** <br/>
 Affecting full-time HQ developers only, this period allows for individual creations to be explored and provides a break from sprints.
@@ -235,7 +233,7 @@ Every change must have an issue in the tracker. If you are fixing a bug, there i
 
 ### Decide which branches the fix is required on
 
-Bugs should normally be fixed on all the supported stable branches that are affected. New features should just go into master, but sometimes minor enhancements are made on the most recent stable branch.
+Bugs should normally be fixed on all the supported stable branches that are affected. New features should just go into main, but sometimes minor enhancements are made on the most recent stable branch.
 
 ### Develop your change using git
 
@@ -285,7 +283,7 @@ Issues identified as [security issues](./policies/security/index.md) are resolve
     - If a developer has shared a solution as Git branches via Github, they should be asked to provide the solutions as [stand-alone patches](https://docs.moodle.org/dev/How_to_create_a_patch) attached to the issue and to [remove the solution from Github](https://docs.moodle.org/dev/#How_to_remove_a_branch_from_Github).
   - contain details about the security problem in the commit message.
     - Instead use generic terms like, "improve", "better handling of"
-- The solution will not be integrated until the week before a [minor release](#Stable-maintenance-cycles) following the normal [Release process](./process/release/index.md). In short, the issue will be incorporated into the integration version, rebased, tested and made ready for release as a normal issue would, but not until as late as possible.
+- The solution will not be integrated until the week before a [minor release](#stable-maintenance-cycles) following the normal [Release process](./process/release/index.md). In short, the issue will be incorporated into the integration version, rebased, tested and made ready for release as a normal issue would, but not until as late as possible.
 - Details of security issues will be shared with registered admins with the minor release.
 - Details of security issues will not be publicly announced until one week after a minor release to allow admins to update.
 Note that not all the labelled (minor) security issues are always handled following the procedure above. It's possible that, after discussion, it's decided a given issue is not a real Moodle security problem (say external disclosures/potential attacks using Moodle as vector, not as target, discussions revealing some private details). Those issues will be processed as normal issues, generating the needed user documentation if necessary and will be part of the habitual weekly releases.

@@ -10,6 +10,8 @@ sidebar_position: 3
 
 The [Moodle](https://moodle.org) Developer Resources is the official source for all Moodle documentation. It's here to make your life as a Moodle Developer easier. To serve that purpose it has to be up-to-date, and as accurate and complete as possible. Every contribution is important in achieving that goal and we hope that you are able to be a part of that mission.
 
+The documentation is written in Markdown (specifically [CommonMark (docs link)](https://commonmark.org/help/) which is built into the website using a tool called [Docusaurus](https://docusaurus.io/docs/next/markdown-features). You don't need to understand all the details of that to make simple contributions.
+
 If you are new to Open Source contributions, or you are interested in learning how to run or contribute to an open source project, then these resources from the [Open Source Guides](https://opensource.guide/) website may give you some help and insight into common practices. It has a collection of resources for individuals, communities, and companies who are interested in open source contributions. The following guides may be especially useful to you:
 
 - [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
@@ -52,7 +54,7 @@ Our documentation is built using [Docusaurus](https://docusaurus.io), a powerful
 
 :::tip
 
-If you're eager to jump in, then the fastest way to set up your development environment is to have [NVM](https://github.com/nvm-sh/nvm) installed and then run:
+If you're eager to jump in the fastest way to set up your development environment is to, after cloning this repository onto your computer, have [NVM](https://github.com/nvm-sh/nvm) installed and then run:
 
 ```console
 nvm install
@@ -60,6 +62,10 @@ npm i -g yarn
 yarn
 yarn start
 ```
+
+Once this completes, the docs will open in your browser. You can just edit the .md source files in your editor and reload the pages to see the effect of your changes.
+
+Once you have made changes in your local checkout, you can commit them, and submit a pull request through github as usual.
 
 :::
 
@@ -155,6 +161,26 @@ When doing so you should may want to:
 - Flag issues that are stale or that should be closed.
 - Review code.
 
+## Adding diagrams
+
+The diagram tool [Mermaid](https://mermaid.js.org/intro/) is integrated into this docs site. This lets you define simple diagrams in the source of the page. For example:
+
+````
+```mermaid
+flowchart LR
+    WRITE[Write Mermaid code] --> Re-render --> Profit!
+```
+````
+
+... which produces:
+
+```mermaid
+flowchart LR
+    WRITE[Write Mermaid code] --> Re-render --> Profit!
+```
+
+To work out the Mermaid syntax you need for the diagram you are trying to create, the [Live editor](https://mermaid.live/) is highly recommended.
+
 ## Our Development Process
 
 While our development of Moodle is managed in the [Moodle Tracker](https://tracker.moodle.org/), all development of these Developer Resources takes place in this [GitHub repository](https://github.com/moodle/devdocs). All work takes place in public, in this repository.
@@ -232,7 +258,7 @@ The `<area>` tag is primarily used for `docs` changes to describe the section of
 Some of this documentation related to a specific version of Moodle:
 
 - `general` - This section is not documented at all
-- `docs` - Relates to the current Moodle development branch, known as `master`
+- `docs` - Relates to the current Moodle development branch, known as `main`
 - `versioned_docs/version-X.Y` - Related to a specific major version of Moodle
 
 If you are documenting a feature which should be documented across older versions, we request that you backport it to the relevant stable versions.
@@ -282,24 +308,14 @@ You can also make of a React element, `<AcademyLink /` which takes both a `cours
 - The `courseName` relates to the key of the course metadata within the `academycourses.json`.
 - The `subject` is used in the text of the information box.
 
-:::note
-
-You will need to import the `AcademyLink` component from `@site/src/components/AcademyLink`
-
-:::
-
 As an example, the following will create a link to the Moodle Academy course with information on setting up your Moodle Development environment:
 
 ```
-import AcademyLink from '@site/src/components/AcademyLink';
-
 <AcademyLink
   subject="Setting up your Moodle Development environment"
   courseName="setup"
 />
 ```
-
-import AcademyLink from '@site/src/components/AcademyLink';
 
 <AcademyLink
   subject="Setting up your Moodle Development environment"

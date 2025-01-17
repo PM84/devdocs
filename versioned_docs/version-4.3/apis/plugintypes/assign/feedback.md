@@ -9,7 +9,6 @@ toc_max_heading_level: 4
 description: Assign feedback plugins allow you to define different ways that a teacher can provide feedback to their students.
 ---
 
-import { Since } from '@site/src/components';
 import {
     SettingsPHP,
     LocalLib,
@@ -20,7 +19,7 @@ An assignment feedback plugin can do many things including providing feedback to
 
 :::tip
 
-For a good reference implementation, see the [file](https://github.com/moodle/moodle/tree/master/mod/assign/feedback/file) feedback plugin included with core because it uses most of the features of feedback plugins.
+For a good reference implementation, see the [file](https://github.com/moodle/moodle/tree/main/mod/assign/feedback/file) feedback plugin included with core because it uses most of the features of feedback plugins.
 
 :::
 

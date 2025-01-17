@@ -22,21 +22,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout DevDocs repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: yarn
 
       - name: Install dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Checkout Moodle
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: moodle/moodle.git
-          ref: master
+          ref: main
           path: .moodle
           # The full history is required to generated the list of contributors.
           fetch-depth: 0
@@ -49,7 +49,7 @@ jobs:
       # Moodle versions.
       - name: Copy component data
         run: |
-          cp .moodle/lib/components.json data/master/
+          cp .moodle/lib/components.json data/main/
 
       - name: Update component data spelling list
         run: |

@@ -6,8 +6,6 @@ tags:
   - Certification
 ---
 
-import { ValidExample } from '@site/src/components';
-
 Moodle is designed to provide equal functionality and information to all people. This means that there should be no barriers for people regardless of disabilities, assistive technologies that are used, different screen sizes and different input devices (for example mouse, keyboard and touchscreen).
 
 ## Accessibility conformance
@@ -18,7 +16,7 @@ As part of our ongoing commitment to accessibility and continuously improving co
 
 #### Moodle LMS
 
-Moodle LMS has been accredited to meet [WCAG 2.1 Level AA conformance](https://www.webkeyit.com/accessibility-services/accessibility-accreditations/moodle).
+Moodle LMS has been accredited to meet [WCAG 2.1 Level AA conformance](https://tracker.moodle.org/secure/attachment/147694/Moodle%20Statement%20of%20Conformance%202024.pdf).
 
 The table below provides a history of the accessibility audits performed on the Moodle LMS.
 
@@ -47,7 +45,24 @@ The Moodle App was accredited to meet [WCAG 2.1 Level AA conformance](https://ww
 
 #### Moodle Workplace
 
-Moodle Workplace is currently in the process of getting the WCAG 2.1 Level AA accreditation.
+Moodle Workplace has been accredited to meet [WCAG 2.1 Level AA conformance](https://www.grackledocs.com/en/accreditations/12295) on 27 Jun 2024.
+
+The table below provides a history of the accessibility audits performed on Moodle Workplace.
+
+| Audit period   | Target conformance | Accreditation date | Fixed versions               |
+|----------------|--------------------|--------------------|------------------------------|
+| August 2023    | WCAG 2.1 Level AA  | 27 June 2024       | v4.4, v4.3, v4.2, v4.1       |
+
+<details>
+
+<summary>Table column information</summary>
+
+- **Audit period** - when the accessibility audit was performed
+- **Target conformance** - the target WCAG guidelines version and the conformance level for the accreditation
+- **Accreditation date** - the date the accessibility accreditation was issued
+- **Fixed versions** - the Moodle versions that include the fixes from the issues raised from the audit
+
+</details>
 
 ### Accessibility accreditation process
 
@@ -73,6 +88,10 @@ The WCAG accreditation expires after 12 months as it is recognised that software
 #### Moodle LMS
 
 An overview of Moodle LMS' conformance with the [WCAG 2.1](https://www.w3.org/TR/WCAG21/) guidelines can be found in our [accessibility conformance report](https://docs.moodle.org/en/VPAT#Moodle%20accessibility%20conformance%20report).
+
+#### Moodle Workplace
+
+An overview of Moodle Workplace's conformance with the [WCAG 2.1](https://www.w3.org/TR/WCAG21/) guidelines can be found in our [accessibility conformance report](https://docs.moodle.org/en/Moodle_Workplace_VPAT#WCAG_2.x_report).
 
 ## Authoring features
 

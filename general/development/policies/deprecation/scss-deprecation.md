@@ -1,12 +1,11 @@
 ---
-title: SCSS Deprecation
+title: SCSS deprecation
 tags:
   - Processes
   - Core development
   - Deprecation
   - SCSS
 ---
-import { Since } from '@site/src/components';
 
 <Since versions={["4.4"]} issueNumber={"MDL-78334"} />
 

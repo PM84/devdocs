@@ -34,16 +34,48 @@
 # Issue #386
 # Redirect /releases to /general/releases
 /releases /general/releases
+
+# Issue 415
+# Redirect /roadmap to /general/community/roadmap
+/roadmap /general/community/roadmap
+
+# Issue #393
+# Redirect /docs/apis/plugintypes/tinymce to /docs/apis/plugintypes/tiny/legacy
+/docs/apis/plugintypes/tinymce /docs/apis/plugintypes/tiny/legacy
+
+# MOBILE-4270
+/general/app/development/release-process /general/development/process-moodleapp/release
+
+# Issue #998
+# Redirect /apis/plugintypes/tiny/legacy to /apis/plugintypes/tiny
+/docs/apis/plugintypes/tiny/legacy /docs/apis/plugintypes/tiny
+/docs/4.4/apis/plugintypes/tiny/legacy /docs/apis/plugintypes/tiny
+/docs/4.3/apis/plugintypes/tiny/legacy /docs/apis/plugintypes/tiny
+/docs/4.2/apis/plugintypes/tiny/legacy /docs/apis/plugintypes/tiny
+
+# Issue #999
+/general/community/meetings/202403 /general/community/meetings/2024/03
+/general/community/meetings/202402 /general/community/meetings/2024/02
+/general/community/meetings/202311 /general/community/meetings/2023/11
+/general/community/meetings/202308 /general/community/meetings/2023/08
+/general/community/meetings/202305 /general/community/meetings/2023/05
+/general/community/meetings/202303 /general/community/meetings/2023/03
+/general/community/meetings/202301 /general/community/meetings/2023/01
+/general/community/meetings/202210 /general/community/meetings/2022/10
+/general/community/meetings/202206 /general/community/meetings/2022/06
+
+############################################################################
+# Splats should go later for performance
+############################################################################
+
+# Issue #386
+# Redirect /releases to /general/releases
 /releases/* /general/releases/:splat
 
 # Issue 415
 # Redirect /roadmap to /general/community/roadmap
-/roadmap to /general/community/roadmap
-/roadmap/* to /general/community/roadmap/:splat
+/roadmap/* /general/community/roadmap/:splat
 
-# Issue #393
-# Redirect /docs/apis/plugintypes/tinymce to /docs/apis/plugintypes/tiny/legacy
-/docs/apis/plugintypes/tinymce to /docs/apis/plugintypes/tiny/legacy
-
-# MOBILE-4270
-/general/app/development/release-process /general/development/process-moodleapp/release
+# Issue #955
+# Redirect /docs/* to /docs/[nextVersion]/:splat
+/docs/* /docs/5.0/:splat
